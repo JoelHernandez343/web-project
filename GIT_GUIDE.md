@@ -133,7 +133,7 @@ git pull --rebase
 ```ssh
 git push
 ```
-Este comando te pedirá tu *usuario* y *contraseña* de tu cuenta de GitHub.
+Este comando te pedirá tu **usuario** y **contraseña** de tu cuenta de GitHub.
 
 Y eso es todo! :blush:
 
