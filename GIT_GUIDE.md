@@ -145,7 +145,24 @@ Un conflicto entre uno o varios **commits** puede darse a diversas razones:
 2. Modificaste las mismas líneas de código que otra persona y Git no sabe qué líneas conservar y cuales no.
 3. Se combinaron **commits** en **origin/master** y Git no puede comparar apropiadamente tu árbol histórico de **commits** con el del repositorio (cosa que no haremos).
 
+Por ejemplo, digamos que en **origin/master** alguien escribió en `main.js` lo siguiente:
+```js
+...
+console.log('Esto es una salida');
+...
+```
+Y nosotros _commiteamos_ en `main.js` lo siguiente:
+```js
+...
+console.log('Hello World!');
+...
+```
+Al momento de ejecutar nuestra sincronización con el repositorio, veremos lo siguiente:
+```ssh
+git pull --rebase
+# salida
 
+```
 ***
 
 ## Resumen
