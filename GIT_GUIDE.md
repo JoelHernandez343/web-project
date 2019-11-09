@@ -80,7 +80,7 @@ git clone https://github.com/JoelHernandez343/web_project.git
 ***
 
 ## Commits
-Un **commit** es una `snapshot` de tu trabajo actual que puede ser compartida con los demás miembros del equipo. Mientras tus cambios _no_ estén en un **commit**, estos _no_ podrán ser compartidos.
+Un **commit** es una `snapshot` local de tu trabajo actual que puede ser compartida con los demás miembros del equipo. Mientras tus cambios _no_ estén en un **commit**, estos _no_ podrán ser compartidos.
 
 Es importante que los **commits** que tu hagas sean _constantes_ pero _representativos_.
 
@@ -148,7 +148,7 @@ Un conflicto entre uno o varios **commits** puede darse a diversas razones:
 Por ejemplo, digamos que en **origin/master** alguien escribió en `main.js` lo siguiente:
 ```js
 ...
-console.log('Esto es una salida');
+console.log('Hi there!');
 ...
 ```
 Y nosotros _commiteamos_ en `main.js` lo siguiente:
@@ -161,8 +161,35 @@ Al momento de ejecutar nuestra sincronización con el repositorio, veremos lo si
 ```ssh
 git pull --rebase
 # salida
-
+...
+CONFLICTO (contenido): Conflicto de fusión en main.js
+error: Falló al fusionar en los cambios.
+...
+Resuelva todos los conflictos manualmente ya sea con 
+"git add/rm <archivo_conflictivo>", luego ejecute "git rebase --continue".
+...
 ```
+Como esperábamos, hay un conflicto que tendremos que resolver antes de poder _pushear_ nuestros **comits**.
+
+Al observar `main.js` veremos lo siguiente:
+```js
+<<<<<< HEAD
+console.log('Hi there!');
+=======
+console.log('Hello World!');
+>>>>>> Nombre del commit problemático
+```
+Editamos el archivo eliminando las marcas de conflicto y dejando las líneas que deseemos que se conserven, por ejemplo:
+```js
+// main.js
+console.log('Hi there!');
+console.log('Hello World!');
+```
+Una vez resuelto el problema, volvemos a preparar `main.js` para continuar con el proceso de sincronización:
+```ssh
+git add .
+```
+
 ***
 
 ## Resumen
