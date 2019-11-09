@@ -17,7 +17,7 @@ Guía de configuración y comandos de Git y GitHub
 - Abrir el instalador y prácticamente dar *siguiente* y *siguiente*, a menos que quieran otra configuración.
     - Recomendado usar Code para el editor de texto por defecto
     - Recomendado usar la opción *Git from the command line and also from 3rd-party software*
-    ![Windows PATH environment](docs/win01.png)
+    <img src="docs/win01.png" width="60%">
 
 ### Linux
 - Si no lo tienes aun instalado (Debian/Ubuntu)
