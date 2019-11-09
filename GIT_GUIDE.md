@@ -24,8 +24,6 @@ Guía de configuración y comandos de Git y GitHub.
 - [Conflictos](#conflictos)
 - [Resumen](#resumen)
 
-***
-
 ## Instalación
 ### Windows
 1. Descargar instalador ([aquí](https://git-scm.com/download/win))
@@ -145,6 +143,7 @@ Un conflicto entre uno o varios **commits** puede darse a diversas razones:
 2. Modificaste las mismas líneas de código que otra persona y Git no sabe qué líneas conservar y cuales no.
 3. Se combinaron **commits** en **origin/master** y Git no puede comparar apropiadamente tu árbol histórico de **commits** con el del repositorio (cosa que no haremos).
 
+### Conflictos de fusión
 Por ejemplo, digamos que en **origin/master** alguien escribió en `main.js` lo siguiente:
 ```js
 ...
@@ -160,7 +159,7 @@ console.log('Hello World!');
 Al momento de ejecutar nuestra sincronización con el repositorio, veremos lo siguiente:
 ```ssh
 git pull --rebase
-# salida
+# Salida:
 ...
 CONFLICTO (contenido): Conflicto de fusión en main.js
 error: Falló al fusionar en los cambios.
@@ -189,7 +188,38 @@ Una vez resuelto el problema, volvemos a preparar `main.js` para continuar con e
 ```ssh
 git add .
 ```
+Continuamos con la sincornización:
+```ssh
+git rebase --continue
+```
+Y ahora sí, podremos _pushear_ nuestros cambios que hayamos hecho :ok_hand: :
+```ssh
+git push
+```
 
+### Conflictos de eliminación:
+Digamos que en **origin/master** se ha eliminado `main.js` porque ya no era necesario, pero en nuestra copia local, nosotros hemos modificado el código.
+Al hacer la sincronización, veremos lo siguiente:
+```ssh
+git pull --rebase
+# Salida:
+...
+CONFLICTO (modificar/borrar): main.js borrado en HEAD y modificado en ... 
+Falta versión Conflicto de eliminación de main.js en el árbol.
+error: Falló al fusionar en los cambios.
+...
+```
+Como vemos que es un conflicto de borrado, decidimos si eliminar `main.js` o dejarlo. Si lo conservamos, tenemos que agregarlo y luego hacer _push_. De lo contrario, eliminamos `main.js`.
+
+Una vez arreglado los conflictos, ejecutamos:
+```ssh
+git add .
+git rebase --continue
+```
+Y ahora sí, podremos _pushear_ nuestros cambios que hayamos hecho :ok_hand: :
+```ssh
+git push
+```
 ***
 
 ## Resumen
