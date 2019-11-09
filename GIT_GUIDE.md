@@ -14,24 +14,24 @@ Guía de configuración y comandos de Git y GitHub
 ## Instalación
 ### Windows
 - Descargar instalador ([here](https://git-scm.com/download/win))
-- Abrir el instalador y prácticamente dar *siguiente* y *siguiente*, a menos que quieran otra configuración.
-    - Recomendado usar Code para el editor de texto por defecto
-    - Recomendado usar la opción *Git from the command line and also from 3rd-party software*
+- Abrir el instalador y prácticamente dar **siguiente** y **siguiente**, a menos que se quiera otra configuración.
+    - Recomendado usar Code para el editor de texto por defecto.
+    - Recomendado usar la opción *Git from the command line and also from 3rd-party software*:
     <img src="docs/win01.png" width="60%">
 
 ### Linux
-- Si no lo tienes aun instalado (Debian/Ubuntu)
+- Si no lo tienes aun instalado (Debian/Ubuntu):
 ```ssh
 sudo apt install git
 ```
-- Para otras distros, instrucciones [aquí](https://git-scm.com/download/linux)
+- Para otras distros, instrucciones [aquí](https://git-scm.com/download/linux).
 
 ### Mac
-- Lista de instrucciones [aquí](https://hackernoon.com/install-git-on-mac-a884f0c9d32c)
+- Lista de instrucciones [aquí](https://hackernoon.com/install-git-on-mac-a884f0c9d32c).
 
 ## Configuración básica
-- Crear una [cuenta en GitHub](https://github.com/)
-- Configurar con tu *nombre de usuario* y *correo* desde la terminal o desde Git Bash (Windows)
+- Crear una [cuenta en GitHub](https://github.com/).
+- Configurar con tu **nombre de usuario** y **correo** desde la terminal o desde Git Bash (Windows):
 ```ssh
 git config --global user.name "Tu nombre aquí"
 git config --global user.email "tu_correo@correo.com"
@@ -40,12 +40,21 @@ git config --global user.email "tu_correo@correo.com"
 ```
 git config --global color.ui true
 ```
-- (Opcional) Editor de tu preferencia (Windows desde el instalador te lo configura)
+- (Opcional) Editor de tu preferencia (Windows desde el instalador te lo configura):
 ```
 git config --global core.editor code
 ```
 
 ## Clonando el repositorio
-
+- Crear una carpeta donde alojar el proyecto.
+- Clonar el repositorio:
+```ssh
+git clone https://github.com/JoelHernandez343/web_project.git
+```
 
 ## Subiendo tus cambios al repositorio
+- Primero sincroniza la rama *origin/master* con el repositorio local:
+```
+git pull --rebase
+```
+    - Si no hay conflictos
