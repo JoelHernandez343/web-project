@@ -2,11 +2,17 @@
 
 Guía de configuración y comandos de Git y GitHub.
 
+Por [Joel Hernández](https://github.com/JoelHernandez343).
+
+***
+
 > Nota:
 > 
 > `Git` es un software de control de versiones.
 >
 > `GitHub` es un sitio web que aloja repositorios usando `Git`.
+
+***
 
 ## Índice
 - [Instalación](#instalación)
@@ -21,6 +27,7 @@ Guía de configuración y comandos de Git y GitHub.
 - [Subiendo tus commits al repositorio](#subiendo-tus-commits-al-repositorio)
 - [Conflictos](#conflictos)
 - [Resumen](#resumen)
+- [Ver también](#ver-también)
 
 ***
 
@@ -241,3 +248,10 @@ git pull --rebase
 ```ssh
 git push
 ```
+
+***
+
+## Ver también
+- [Your first time with git and github](https://kbroman.org/github_tutorial/pages/first_time.html)
+- [git - the simple guide](https://rogerdudler.github.io/git-guide/)
+- [Configuración de un repositorio (Bitbucket)](https://www.atlassian.com/es/git/tutorials/setting-up-a-repository)
