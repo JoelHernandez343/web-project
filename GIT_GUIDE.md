@@ -8,8 +8,6 @@ Guía de configuración y comandos de Git y GitHub.
 >
 > `GitHub` es un sitio web que aloja repositorios usando `Git`.
 
-***
-
 ## Índice
 - [Instalación](#instalación)
     - [Windows](#windows)
@@ -23,6 +21,8 @@ Guía de configuración y comandos de Git y GitHub.
 - [Subiendo tus commits al repositorio](#subiendo-tus-commits-al-repositorio)
 - [Conflictos](#conflictos)
 - [Resumen](#resumen)
+
+***
 
 ## Instalación
 ### Windows
@@ -45,7 +45,7 @@ sudo apt install git
 Para comprobar que tienes instalado Git, debes poder ejecutar el siguiente comando:
 ```ssh
 git --version
-# Salida
+# Salida:
 git version 2.20.10
 ```
 ***
@@ -115,7 +115,7 @@ git add .
 Ya teniendo todos nuestros cambios _rastreados_ por Git, podemos crear el **commit** de la siguiente forma:
 
 ```ssh
-git commit -m "<Descripción del commit>"
+git commit -m "Descripción del commit"
 ```
 
 ***
@@ -133,7 +133,7 @@ git push
 ```
 Este comando te pedirá tu **usuario** y **contraseña** de tu cuenta de GitHub.
 
-Y eso es todo! :blush:
+Y eso es todo, tus cambios estarán disponibles para los demás! :blush:
 
 ***
 
@@ -188,11 +188,11 @@ Una vez resuelto el problema, volvemos a preparar `main.js` para continuar con e
 ```ssh
 git add .
 ```
-Continuamos con la sincornización:
+Continuamos con la sincronización:
 ```ssh
 git rebase --continue
 ```
-Y ahora sí, podremos _pushear_ nuestros cambios que hayamos hecho :ok_hand: :
+Y ahora sí, podremos _pushear_ nuestros cambios que hayamos hecho :ok_hand::
 ```ssh
 git push
 ```
@@ -216,10 +216,28 @@ Una vez arreglado los conflictos, ejecutamos:
 git add .
 git rebase --continue
 ```
-Y ahora sí, podremos _pushear_ nuestros cambios que hayamos hecho :ok_hand: :
+Y ahora sí, podremos _pushear_ nuestros cambios que hayamos hecho :ok_hand::
 ```ssh
 git push
 ```
 ***
 
 ## Resumen
+
+1. Para agregar los cambios que hayamos hecho **antes** de hacer algún **commit**, ejecutamos el siguiente comando:
+```ssh
+git add .
+```
+2. Para crear el **commit**:
+```ssh
+git commit -m "Descripción del commit"
+```
+3. Sincronizamos nuestro repositorio local con el repositorio en línea **origin/master**:
+```ssh
+git pull --rebase
+```
+4. Resolvemos [cualquier conflicto](#conflictos).
+5. Compartimos nuestros cambios / **commits** con el resto del equipo al _pushearlos_:
+```ssh
+git push
+```
