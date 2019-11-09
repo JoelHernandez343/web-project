@@ -1,6 +1,12 @@
 # Git guide
 
-Guía de configuración y comandos de Git y GitHub
+Guía de configuración y comandos de Git y GitHub.
+
+> Nota:
+> 
+> `Git` es un software de control de versiones.
+>
+> `GitHub` es un sitio web que aloja repositorios usando `Git`.
 
 ***
 
@@ -38,6 +44,12 @@ sudo apt install git
 ### Mac
 - Lista de instrucciones [aquí](https://hackernoon.com/install-git-on-mac-a884f0c9d32c).
 
+Para comprobar que tienes instalado Git, debes poder ejecutar el siguiente comando:
+```ssh
+git --version
+# Salida
+git version 2.20.10
+```
 ***
 
 ## Configuración básica
@@ -128,6 +140,11 @@ Y eso es todo! :blush:
 ***
 
 ## Conflictos
+Un conflicto entre uno o varios **commits** puede darse a diversas razones:
+1. Modificaste un archivo que ha sido eliminado en **origin/master**.
+2. Modificaste las mismas líneas de código que otra persona y Git no sabe qué líneas conservar y cuales no.
+3. Se combinaron **commits** en **origin/master** y Git no puede comparar apropiadamente tu árbol histórico de **commits** con el del repositorio (cosa que no haremos).
+
 
 ***
 
