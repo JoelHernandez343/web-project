@@ -2,6 +2,8 @@
 
 Guía de configuración y comandos de Git y GitHub
 
+***
+
 ## Índice
 - [Instalación](#instalación)
     - [Windows](#windows)
@@ -9,12 +11,19 @@ Guía de configuración y comandos de Git y GitHub
     - [Mac](#mac)
 - [Configuración inicial](#configuración-básica)
 - [Clonando el repositorio](#clonando-el-repositorio)
-- [Subiendo tus cambios al repositorio](#subiendo-tus-cambios-al-repositorio)
+- [Commits](#commits)
+    - [Agregando cambios al Staging Area](#agregando-cambios-al-staging-area)
+    - [Creando un commit](#creando-un-commit)
+- [Subiendo tus commits al repositorio](#subiendo-tus-commits-al-repositorio)
+- [Conflictos](#conflictos)
+- [Resumen](#resumen)
+
+***
 
 ## Instalación
 ### Windows
-- Descargar instalador ([here](https://git-scm.com/download/win))
-- Abrir el instalador y prácticamente dar **siguiente** y **siguiente**, a menos que se quiera otra configuración.
+1. Descargar instalador ([aquí](https://git-scm.com/download/win))
+2. Abrir el instalador y prácticamente dar **siguiente** y **siguiente**, a menos que se quiera otra configuración.
     - Recomendado usar Code para el editor de texto por defecto.
     - Recomendado usar la opción *Git from the command line and also from 3rd-party software*:
     <img src="docs/win01.png" width="60%">
@@ -29,32 +38,97 @@ sudo apt install git
 ### Mac
 - Lista de instrucciones [aquí](https://hackernoon.com/install-git-on-mac-a884f0c9d32c).
 
+***
+
 ## Configuración básica
-- Crear una [cuenta en GitHub](https://github.com/).
-- Configurar con tu **nombre de usuario** y **correo** desde la terminal o desde Git Bash (Windows):
+1. Crear una [cuenta en GitHub](https://github.com/).
+2. Configurar con tu **nombre de usuario** y **correo** desde la terminal o desde Git Bash (Windows):
 ```ssh
 git config --global user.name "Tu nombre aquí"
 git config --global user.email "tu_correo@correo.com"
 ```
-- (Opcional) Colores en git:
-```
+3. (Opcional) Colores en git:
+```ssh
 git config --global color.ui true
 ```
-- (Opcional) Editor de tu preferencia (Windows desde el instalador te lo configura):
-```
+4. (Opcional) Editor de tu preferencia (Windows desde el instalador te lo configura):
+```ssh
 git config --global core.editor code
 ```
 
+***
+
 ## Clonando el repositorio
-- Crear una carpeta donde alojar el proyecto.
-- Clonar el repositorio:
+1. Crear una carpeta donde alojar el proyecto.
+2. Clonar el repositorio:
 ```ssh
 git clone https://github.com/JoelHernandez343/web_project.git
 ```
 
-## Subiendo tus cambios al repositorio
-- Primero sincroniza la rama *origin/master* con el repositorio local:
+***
+
+## Commits
+Un **commit** es una `snapshot` de tu trabajo actual que puede ser compartida con los demás miembros del equipo. Mientras tus cambios _no_ estén en un **commit**, estos _no_ podrán ser compartidos.
+
+Es importante que los **commits** que tu hagas sean _constantes_ pero _representativos_.
+
+### Agregando cambios al Staging Area
+Es importante que los documentos que edites sean _rastreados_ por Git para que los cambios puedan ser controlados. Para que un documento nuevo o un cambio nuevo sea _rastreado_ por Git, tenemos que agregarlos al `staging area`, que es la fase de preparación para hacer un **commit**.
+
+Podemos observar el estado de nuestro repositorio con:
+```ssh
+git status
 ```
+Este comando nos mostrará los documentos editados, borrados, creados o que ya se encuentran preparados para hacer el **commit**, por ejemplo:
+```ssh
+git status
+# Salida:
+En la rama master
+Tu rama está actualizada con 'origin/master'
+
+Cambios no rastreados para el commit:
+...
+    modificado:  GIT_GUIDE.md
+    borrado:     prueba1.txt
+...
+```
+Para decirle a Git que un archivo está listo para el **commit**, ejecutamos el siguiente comando:
+```ssh
+git add <archivo>
+```
+Si queremos agregar ***todos los cambios*** que hayamos hecho, ejecutamos:
+```ssh
+git add .
+```
+
+### Creando un commit
+Ya teniendo todos nuestros cambios _rastreados_ por Git, podemos crear el **commit** de la siguiente forma:
+
+```ssh
+git commit -m "<Descripción del commit>"
+```
+
+***
+
+## Subiendo tus commits al repositorio
+Asegúrate que haz hecho el **commit** o los **commits** que deseas subir.
+1. Primero sincroniza la rama **origin/master** con el repositorio local:
+```ssh
 git pull --rebase
 ```
-    - Si no hay conflictos
+> Si hay un conflicto, ve [Solucionando conflictos con origin/master](#conflictos)
+2. Una vez que no hay conflictos, puedes hacer el `push` a **origin/master**:
+```ssh
+git push
+```
+Este comando te pedirá tu *usuario* y *contraseña* de tu cuenta de GitHub.
+
+Y eso es todo! :blush:
+
+***
+
+## Conflictos
+
+***
+
+## Resumen
