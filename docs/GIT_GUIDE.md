@@ -19,7 +19,7 @@ Por [Joel Hernández](https://github.com/JoelHernandez343).
     - [Windows](#windows)
     - [Linux](#linux)
     - [Mac](#mac)
-- [Configuración inicial](#configuración-básica)
+- [Configuración inicial](#configuración-inicial)
 - [Clonando el repositorio](#clonando-el-repositorio)
 - [Commits](#commits)
     - [Agregando cambios al Staging Area](#agregando-cambios-al-staging-area)
@@ -37,7 +37,7 @@ Por [Joel Hernández](https://github.com/JoelHernandez343).
 2. Abrir el instalador y prácticamente dar **siguiente** y **siguiente**, a menos que se quiera otra configuración.
     - Recomendado usar Code para el editor de texto por defecto.
     - Recomendado usar la opción *Git from the command line and also from 3rd-party software*:
-    <img src="docs/win01.png" width="60%">
+    <img src="win01.png" width="60%">
 
 ### Linux
 - Si no lo tienes aun instalado (Debian/Ubuntu):
@@ -57,7 +57,7 @@ git version 2.20.10
 ```
 ***
 
-## Configuración básica
+## Configuración inicial
 1. Crear una [cuenta en GitHub](https://github.com/).
 2. Configurar con tu **nombre de usuario** y **correo** desde la terminal o desde Git Bash (Windows):
 ```ssh
