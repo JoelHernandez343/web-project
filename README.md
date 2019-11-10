@@ -16,20 +16,20 @@ Proyecto de Web. Sitio web que permite compartir postales entre personas...
 
 ## Cómo trabajar
 
-Si no has usado Git o quieres un resumen de comandos, puedes ver esa información en [GIT_GUIDE](docs/GIT_GUIDE.md) 
+Si no has usado Git o quieres un resumen de comandos, checa esta [guía de Git](docs/GIT_GUIDE.md). :fire:
 
 ### Prerrequisitos
 - [Instalar Git](docs/GIT_GUIDE.md#instalación).
 - [Configurar Git](docs/GIT_GUIDE.md#configuración-inicial).
 - Tener el repositorio [clonado](docs/GIT_GUIDE.md#clonando-el-repositorio).
 ### FrontEnd
-- Ver [Trabajando con el FrontEnd](docs/FRONTEND.md).
+- Ver [Trabajando con el FrontEnd](docs/FRONTEND.md). :sunglasses:
 ### BackEnd
-- Ver [Trabajando con el BackEnd](docs/BACKEND.md).
+- Ver [Trabajando con el BackEnd](docs/BACKEND.md). :muscle:
 ### Subiendo tus cambios
 - Ver [Subiendo tus cambios al repositorio **origin/master**](docs/GIT_GUIDE.md#subiendo-tus-commits-al-repositorio).
 
-## To-do
+## To-do :cry:
 - [ ] Vistas planeadas
     - [ ] Vista principal
     - [ ] Vista de Registro
@@ -43,3 +43,5 @@ Si no has usado Git o quieres un resumen de comandos, puedes ver esa informació
 
 ## Changelog
 Aquí puedes ver el progreso del proyecto, puedes ver la [sección de versiones aquí](CHANGELOG.md).
+
+Esperemos que este proyecto quede bien chulo :pray:
