@@ -1,7 +1,17 @@
-extends layouts/_home.pug 
+//- Extendemos la plantilla _home.pug
+extends layouts/_home.pug
+//- Incluímos el mixin _card.pug
+include mixins/_card.pug
 
 block content
-  h1 Contenido
+  - var title = 'Esto es un título', content = 'Esto es un contenido'
+  - var title2 = 'Otro título', content2 = 'Otro contenido' 
+  h1 Esto es el index
+  .row
+    .col.s6
+      +card(title, content)
+    .col.s6
+      +card(title2, content2)
 
 block footer
   h2 Footer

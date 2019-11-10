@@ -6,6 +6,8 @@
 - [Cómo trabajar](#cómo-trabajar)
     - [Prerrequisitos](#prerrequisitos)
     - [FrontEnd](#frontend)
+    - [BackEnd](#backend)
+    - [Subiendo tus cambios](#subiendo-tus-cambios)
 - [To-do](#to-do)
 - [Changelog](#changelog)
 
@@ -13,6 +15,9 @@
 Proyecto de Web. Sitio web que permite compartir postales entre personas...
 
 ## Cómo trabajar
+
+Si no has usado Git o quieres un resumen de comandos, puedes ver esa información en [GIT_GUIDE](docs/GIT_GUIDE.md) 
+
 ### Prerrequisitos
 - [Instalar Git](docs/GIT_GUIDE.md#instalación).
 - [Configurar Git](docs/GIT_GUIDE.md#configuración-inicial).
