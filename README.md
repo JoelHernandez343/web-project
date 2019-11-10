@@ -29,7 +29,8 @@ Si no has usado Git o quieres un resumen de comandos, checa esta [guía de Git](
 ### Subiendo tus cambios
 - Ver [Subiendo tus cambios al repositorio **origin/master**](docs/GIT_GUIDE.md#subiendo-tus-commits-al-repositorio).
 
-## To-do :cry:
+## To-do
+:sleepy:
 - [ ] Vistas planeadas
     - [ ] Vista principal
     - [ ] Vista de Registro
