@@ -2,169 +2,54 @@ doctype html
 html
   head
     title Mis Postales
-    link(rel="stylesheet" href="./../css/materialize.min.css")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css")
     link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
-    link(rel="stylesheet" href="./../css/main.css")
-
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
   body
-    ul.dropdown-content#dropdown1
+
+    //-Header
+    ul.sidenav#mobile-demo
       li
-        a(href="badges.html") Amistad / Amor
-        a(href="badges.html") Consciencia ambiental
-        a(href="badges.html") Invitaciones
-        a(href="badges.html") Animales
-        a(href="badges.html") Festividades
-        a(href="badges.html") Felicitación
-    nav
-      //-Ajustar para que el menú se vea en el móvil o en mediano
-      div(class="nav-wrapper indigo darken-1-text s4 m6 l12")
-        a.brand-logo(href="#!") Postales
-          i.material-icons &nbsp&nbsployalty
-        ul(class = "right hide-on-med-and-down s4 m6 l12")
-          li
-            a.dropdown-trigger(href="#!" data-target="dropdown1") Categorias
-              i(class = "right material-icons") keyboard_arrow_down
-          li
-            a(href="badges.html") Enviar Postal
-          li
-            a(href="collapsible.html") Tu opinión
-          li
-            a.material-icons(href="mobile.html") account_circle
-    div(class="carousel carousel-slider center blue lighten-5 white-text s12 m12 l12")
-      div(class="carousel-fixed-item center")
-      div.carousel-item(href="#one!")
-        div(class="carousel-fixed-item center")
-          a(class="btn waves-effect white grey-text darken-text-2" href="google.com") Mirar
-        img(src="https://lorempixel.com/800/400/food/1")
-        h2 Amor/amistad
-        p.white-text This is my panel
-      div.carousel-item(href="#two!")
-        div(class="carousel-fixed-item center")
-          a(class="btn waves-effect white grey-text darken-text-2" href="google.com") Mirar
-        img(src="https://lorempixel.com/800/400/food/2")
-        h2 Conciencia Ambiental
-        p.white-text This is my panel
-      div.carousel-item(href="#three!")
-        div(class="carousel-fixed-item center")
-          a(class="btn waves-effect white grey-text darken-text-2" href="google.com") Mirar
-        img(src="https://lorempixel.com/800/400/food/3")
-        h2 Invitaciones
-        p.white-text This is my panel
-      div.carousel-item(href="#four!")
-        div(class="carousel-fixed-item center")
-          a(class="btn waves-effect white grey-text darken-text-2" href="google.com") Mirar
-        img(src="https://lorempixel.com/800/400/food/4")
-        h2 Animales
-        p.white-text This is my panel
-      div.carousel-item(href="#five!")
-        div(class="carousel-fixed-item center")
-          a(class="btn waves-effect white grey-text darken-text-2" href="google.com") Mirar
-        img(src="https://lorempixel.com/800/400/food/2")
-        h2 Festividades
-        p.white-text This is my panel
-      div.carousel-item(href="#six!")
-        div(class="carousel-fixed-item center")
-          a(class="btn waves-effect white grey-text darken-text-2" href="google.com") Mirar
-        img(src="https://lorempixel.com/800/400/food/3")
-        h2 Felicitación
-        p.white-text This is my panel 1
+        a(href="#") Categorías
+      li
+        a(href="badges.html") Enviar
+      li
+        a(href="badges.html") Sign up / Log in
 
-    //-Más populares
-
-    ul(class="center amber-text s12 m12 l12")
-        h4.brand-logo(href="#!") Más populares
-          i(class="small material-icons") &nbspgrade
+    nav(class="nav-extended orange accent-3-text")
+      div.nav-wrapper
+        a.brand-logo(href="#") Logo
+        a.sidenav-trigger(href="#" data-target="mobile-demo")
+          i.material-icons menu
+        ul(class="right hide-on-med-and-down")#nav-mobile
+          li
+            a(href="saas.html") Categorías
+          li
+            a(href="saas.html") Enviar
+          li
+            a(href="mobile.html") 
+              i(class="large material-icons") account_circle
     
-    ul.row
-      div(class="col s12 m4 l3")
-        .card
-          div.card-image
-            img(src="./../images/example.jpg")
-            span.card-title Older
-          div.card-content
-            p It's interesting workin with this. I am convenient because I require little markup to use effectively.
-          div.card-action
-            i.material-icons(href="mobile.html") favorite
-      div(class="col s12 m4 l3")
-        .card
-          div.card-image
-            img(src="./../images/images.jpg")
-            span.card-title Two
-          div.card-content
-            p It's interesting workin with this. I am convenient because I require little markup to use effectively.
-          div.card-action
-            i.material-icons(href="mobile.html") favorite
-      div(class="col s12 m4 l3")
-        .card
-          div.card-image
-            img(src="./../images/threejpg.jpg")
-            span.card-title Three
-          div.card-content
-            p It's interesting workin with this. I am convenient because I require little markup to use effectively.
-          div.card-action
-            i.material-icons(href="mobile.html") favorite
-      div(class="col s12 m4 l3")
-        .card
-          div.card-image
-            img(src="./../images/example.jpg")
-            span.card-title Older
-          div.card-content
-            p It's interesting workin with this. I am convenient because I require little markup to use effectively.
-          div.card-action
-            i.material-icons(href="mobile.html") favorite
-      a(class="btn waves-effect white grey-text darken-text-2" href="https://www.google.com") View more
-        i(class="tiny material-icons")(href ="mobile.html") &nbspperson_add
+    //-Imágenes deslizantes
+    div(class="carousel carousel-slider s12 m12 l8")
+      a.carousel-item(href="hola.html")
+        img(src="/images/example.jpg")
+      a.carousel-item(href="#two!")
+        img(src="/images/images.jpg")
+      a.carousel-item(href="#three!")
+        img(src="/images/example.jpg")
+      a.carousel-item(href="#four!")
+        img(src="/images/images.jpg")
+      a.carousel-item(href="#five!")
+        img(src="/images/example.jpg")
+      a.carousel-item(href="#six!")
+        img(src="/images/images.jpg")
 
-    //-Más enviadas
+    //-Footer
 
-    ul(class="center lime-text s12 m12 l12")
-        h4.brand-logo(href="#!") Más enviadas
-          i(class="small material-icons") &nbspsend
-    
-    ul.row
-      div(class="col s12 m4 l3")
-        .card
-          div.card-image
-            img(src="./../images/example.jpg")
-            span.card-title Older
-          div.card-content
-            p It's interesting workin with this. I am convenient because I require little markup to use effectively.
-          div.card-action
-            i.material-icons(href="mobile.html") favorite
-      div(class="col s12 m4 l3")
-        .card
-          div.card-image
-            img(src="./../images/images.jpg")
-            span.card-title Two
-          div.card-content
-            p It's interesting workin with this. I am convenient because I require little markup to use effectively.
-          div.card-action
-            i.material-icons(href="mobile.html") favorite
-      div(class="col s12 m4 l3")
-        .card
-          div.card-image
-            img(src="./../images/threejpg.jpg")
-            span.card-title Three
-          div.card-content
-            p It's interesting workin with this. I am convenient because I require little markup to use effectively.
-          div.card-action
-            i.material-icons(href="mobile.html") favorite
-      div(class="col s12 m4 l3")
-        .card
-          div.card-image
-            img(src="./../images/example.jpg")
-            span.card-title Older
-          div.card-content
-            p It's interesting workin with this. I am convenient because I require little markup to use effectively.
-          div.card-action
-            i.material-icons(href="mobile.html") favorite
-      a(class="btn waves-effect white grey-text darken-text-2" href="https://www.google.com") View more
-        i(class="tiny material-icons")(href ="mobile.html") &nbspperson_add
-    
-
-
-
-    script(type="text/javascript" src="./../js/jquery-3.4.1.min.js")
-    script(type="text/javascript" src="./../js/materialize.min.js")
-    script(type="text/javascript" src="./../js/main.js")
+    script(
+      src="https://code.jquery.com/jquery-3.4.1.min.js" 
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" 
+      crossorigin="anonymous")
+    script(type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js")
+    script(type="text/javascript" src="/js/main.js")

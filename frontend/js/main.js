@@ -1,8 +1,8 @@
 $(document).ready(function() {
-    $('.carousel').carousel();
-    $('.collapsible').collapsible();
+    $('.sidenav').sidenav();
 });
-$(".dropdown-trigger").dropdown();
+
 $('.carousel.carousel-slider').carousel({
-    fullWidth: true
+    fullWidth: false,
+    indicators: true
 });
