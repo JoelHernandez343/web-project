@@ -7,34 +7,41 @@ html
     link(rel="stylesheet" href="./../css/main.css")
 
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
-  body
-
+  body  
+    .background-image(url="/./../images/logo1.png")
     //-Header
     ul.sidenav#mobile-demo
       li
         a(href="#") Categorías
+          i(class = "small right material-icons") keyboard_arrow_down
       li
         a(href="badges.html") Enviar
+          i(class = "right material-icons") send
       li
         a(href="badges.html") Sign up/Log in
+          i(class="right material-icons") account_circle
 
-    nav(class="nav-extended orange accent-3-text")
-      div.nav-wrapper
-        a.brand-logo(href="#") Logo
-        a.sidenav-trigger(href="#" data-target="mobile-demo")
-          i.material-icons menu
-        ul(class="right hide-on-med-and-down")#nav-mobile
-          li
-            a(href="saas.html") Categorías
-          li
-            a(href="saas.html") Enviar
-          li
-            a(href="mobile.html") 
-              i(class="large material-icons") account_circle
+    div.navbar-fixed
+      nav(class="center right nav-extended blue darken-4-text s8 m8 l8")
+        div(class="nav-wrapper ")
+          a(class="brand-logo white-text" href="#")
+            img(style="max-height: 64px;" src="/./../images/logo1.png" alt="")
+          a.sidenav-trigger(href="#" data-target="mobile-demo")
+            i.material-icons menu
+          ul(class="right hide-on-med-and-down")#nav-mobile
+            li
+              a(href="saas.html") Categorías
+                i(class = "small right material-icons") keyboard_arrow_down
+            li
+              a(href="saas.html") Enviar
+                i(class = "right material-icons") send
+            li
+              a(href="mobile.html") Account
+                i(class="right material-icons") account_circle
     
     //-Imágenes deslizantes
     div(class="carousel carousel-slider s12 m12 l8")
-      a.carousel-item(href="hola.html")
+      a.carousel-item(href="#one!")
         img(src="./../images/example.jpg")
       a.carousel-item(href="#two!")
         img(src="./../images/images.jpg")
@@ -46,6 +53,52 @@ html
         img(src="./../images/example.jpg")
       a.carousel-item(href="#six!")
         img(src="./../images/images.jpg")
+    
+    //-Más populares
+
+    ul(class="center amber-text s12 m12 l12")
+        h4.brand-logo(href="#!") Más populares
+          i(class="small material-icons") &nbspgrade
+    
+    ul.row
+      div(class="col s12 m4 l3")
+        .card
+          div.card-image
+            img(src="/../images/example.jpg")
+            span.card-title Older
+          div.card-content
+            p It's interesting workin with this. I am convenient because I require little markup to use effectively.
+          div.card-action
+            i.material-icons(href="mobile.html") favorite
+      div(class="col s12 m4 l3")
+        .card
+          div.card-image
+            img(src="/../images/images.jpg")
+            span.card-title Two
+          div.card-content
+            p It's interesting workin with this. I am convenient because I require little markup to use effectively.
+          div.card-action
+            i.material-icons(href="mobile.html") favorite
+      div(class="col s12 m4 l3")
+        .card
+          div.card-image
+            img(src="/../images/threejpg.jpg")
+            span.card-title Three
+          div.card-content
+            p It's interesting workin with this. I am convenient because I require little markup to use effectively.
+          div.card-action
+            i.material-icons(href="mobile.html") favorite
+      div(class="col s12 m4 l3")
+        .card
+          div.card-image
+            img(src="/../images/example.jpg")
+            span.card-title Older
+          div.card-content
+            p It's interesting workin with this. I am convenient because I require little markup to use effectively.
+          div.card-action
+            i.material-icons(href="mobile.html") favorite
+      a(class="btn waves-effect white grey-text darken-text-2" href="google.com") View more
+        i(class="tiny material-icons")(href ="mobile.html") &nbspperson_add
 
     //-Footer
 
