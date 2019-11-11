@@ -8,21 +8,30 @@ html
 
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
   body  
-    .background-image(url="/./../images/logo1.png")
+    //-function
+    ul.dropdown-content#dropdown1
+      li
+        a(href="./amistad.html") Amistad / Amor
+        a(href="./ambiente.html") Consciencia ambiental
+        a(href="./invitaciones.html") Invitaciones
+        a(href="./animales.html") Animales
+        a(href="./festividades.html") Festividades
+        a(href="./felicitacion.html") Felicitación
+
     //-Header
     ul.sidenav#mobile-demo
       li
-        a(href="#") Categorías
+        a.dropdown-trigger(href="#!" data-target="dropdown1") Categorias
           i(class = "small right material-icons") keyboard_arrow_down
       li
-        a(href="badges.html") Enviar
+        a(href="./send.html") Enviar
           i(class = "right material-icons") send
       li
-        a(href="badges.html") Sign up/Log in
+        a(href="./login.html") Sign up/Log in
           i(class="right material-icons") account_circle
 
     div.navbar-fixed
-      nav(class="center right nav-extended blue darken-4-text s8 m8 l8")
+      nav(class="center right nav-extended indigo darken-3-text s8 m8 l8")
         div(class="nav-wrapper ")
           a(class="brand-logo white-text" href="#")
             img(style="max-height: 64px;" src="/./../images/logo1.png" alt="")
@@ -30,13 +39,13 @@ html
             i.material-icons menu
           ul(class="right hide-on-med-and-down")#nav-mobile
             li
-              a(href="saas.html") Categorías
+              a.dropdown-trigger(href="#!" data-target="dropdown1") Categorias
                 i(class = "small right material-icons") keyboard_arrow_down
             li
-              a(href="saas.html") Enviar
+              a(href="./send.html") Enviar
                 i(class = "right material-icons") send
             li
-              a(href="mobile.html") Account
+              a(href="./account.html") Account
                 i(class="right material-icons") account_circle
     
     //-Imágenes deslizantes

@@ -6,3 +6,5 @@ $('.carousel.carousel-slider').carousel({
     fullWidth: false,
     indicators: true
 });
+
+$('.dropdown-trigger').dropdown();
