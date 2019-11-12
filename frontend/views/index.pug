@@ -27,10 +27,11 @@ html
         a(href="./send.html") Enviar
           i(class = "right material-icons") send
       li
-        a(href="./login.html") Sign up/Log in
+        //-Aquí que mande al login o a la cuenta si ya la tiene abierta
+        a(href="./account.html") Account 
           i(class="right material-icons") account_circle
 
-    div.navbar-fixed
+    div.navbar-fixed#heading
       nav(class="center right nav-extended indigo darken-3-text s8 m8 l8")
         div(class="nav-wrapper ")
           a(class="brand-logo white-text" href="#")
@@ -47,67 +48,67 @@ html
             li
               a(href="./account.html") Account
                 i(class="right material-icons") account_circle
-    
     //-Imágenes deslizantes
-    div(class="carousel carousel-slider s12 m12 l8")
-      a.carousel-item(href="#one!")
-        img(src="./../images/example.jpg")
-      a.carousel-item(href="#two!")
-        img(src="./../images/images.jpg")
-      a.carousel-item(href="#three!")
-        img(src="./../images/example.jpg")
-      a.carousel-item(href="#four!")
-        img(src="./../images/images.jpg")
-      a.carousel-item(href="#five!")
-        img(src="./../images/example.jpg")
-      a.carousel-item(href="#six!")
-        img(src="./../images/images.jpg")
-    
-    //-Más populares
+    div.row#bodying
+      div(class="carousel carousel-slider s12 m12 l8")
+        a.carousel-item(href="#one!")
+          img(src="./../images/example.jpg")
+        a.carousel-item(href="#two!")
+          img(src="./../images/images.jpg")
+        a.carousel-item(href="#three!")
+          img(src="./../images/example.jpg")
+        a.carousel-item(href="#four!")
+          img(src="./../images/images.jpg")
+        a.carousel-item(href="#five!")
+          img(src="./../images/example.jpg")
+        a.carousel-item(href="#six!")
+          img(src="./../images/images.jpg")
+      
+      //-Más populares
 
-    ul(class="center amber-text s12 m12 l12")
-        h4.brand-logo(href="#!") Más populares
-          i(class="small material-icons") &nbspgrade
-    
-    ul.row
-      div(class="col s12 m4 l3")
-        .card
-          div.card-image
-            img(src="/../images/example.jpg")
-            span.card-title Older
-          div.card-content
-            p It's interesting workin with this. I am convenient because I require little markup to use effectively.
-          div.card-action
-            i.material-icons(href="mobile.html") favorite
-      div(class="col s12 m4 l3")
-        .card
-          div.card-image
-            img(src="/../images/images.jpg")
-            span.card-title Two
-          div.card-content
-            p It's interesting workin with this. I am convenient because I require little markup to use effectively.
-          div.card-action
-            i.material-icons(href="mobile.html") favorite
-      div(class="col s12 m4 l3")
-        .card
-          div.card-image
-            img(src="/../images/threejpg.jpg")
-            span.card-title Three
-          div.card-content
-            p It's interesting workin with this. I am convenient because I require little markup to use effectively.
-          div.card-action
-            i.material-icons(href="mobile.html") favorite
-      div(class="col s12 m4 l3")
-        .card
-          div.card-image
-            img(src="/../images/example.jpg")
-            span.card-title Older
-          div.card-content
-            p It's interesting workin with this. I am convenient because I require little markup to use effectively.
-          div.card-action
-            i.material-icons(href="mobile.html") favorite
-      a(class="btn waves-effect white grey-text darken-text-2" href="google.com") View more
-        i(class="tiny material-icons")(href ="mobile.html") &nbspperson_add
+      ul(class="center amber-text s12 m12 l12")
+          h4.brand-logo(href="#!") Más populares
+            i(class="small material-icons") &nbspgrade
+      
+      ul.row
+        div(class="col s12 m4 l3")
+          .card
+            div.card-image
+              img(src="/../images/example.jpg")
+              span.card-title Older
+            div.card-content
+              p It's interesting workin with this. I am convenient because I require little markup to use effectively.
+            div.card-action
+              i.material-icons(href="mobile.html") favorite
+        div(class="col s12 m4 l3")
+          .card
+            div.card-image
+              img(src="/../images/images.jpg")
+              span.card-title Two
+            div.card-content
+              p It's interesting workin with this. I am convenient because I require little markup to use effectively.
+            div.card-action
+              i.material-icons(href="mobile.html") favorite
+        div(class="col s12 m4 l3")
+          .card
+            div.card-image
+              img(src="/../images/threejpg.jpg")
+              span.card-title Three
+            div.card-content
+              p It's interesting workin with this. I am convenient because I require little markup to use effectively.
+            div.card-action
+              i.material-icons(href="mobile.html") favorite
+        div(class="col s12 m4 l3")
+          .card
+            div.card-image
+              img(src="/../images/example.jpg")
+              span.card-title Older
+            div.card-content
+              p It's interesting workin with this. I am convenient because I require little markup to use effectively.
+            div.card-action
+              i.material-icons(href="mobile.html") favorite
+        a(class="btn waves-effect white grey-text darken-text-2" href="google.com") View more
+          i(class="tiny material-icons")(href ="mobile.html") &nbspperson_add
 
     //-Footer
 

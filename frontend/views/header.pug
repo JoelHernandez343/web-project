@@ -1,0 +1,50 @@
+doctype html
+html
+  head
+    title Mis Postales
+    link(rel="stylesheet" href="./../css/materialize.min.css")
+    link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+    link(rel="stylesheet" href="./../css/main.css")
+
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+  body  
+    //-function
+    ul.dropdown-content#dropdown1
+      li
+        a(href="./amistad.html") Amistad / Amor
+        a(href="./ambiente.html") Consciencia ambiental
+        a(href="./invitaciones.html") Invitaciones
+        a(href="./animales.html") Animales
+        a(href="./festividades.html") Festividades
+        a(href="./felicitacion.html") Felicitación
+
+    //-Header
+    ul.sidenav#mobile-demo
+      li
+        a.dropdown-trigger(href="#!" data-target="dropdown1") Categorias
+          i(class = "small right material-icons") keyboard_arrow_down
+      li
+        a(href="./send.html") Enviar
+          i(class = "right material-icons") send
+      li
+        //-Aquí que mande al login o a la cuenta si ya la tiene abierta
+        a(href="./account.html") Account 
+          i(class="right material-icons") account_circle
+
+    div.navbar-fixed
+      nav(class="center right nav-extended indigo darken-3-text s8 m8 l8")
+        div(class="nav-wrapper ")
+          a(class="brand-logo white-text" href="#")
+            img(style="max-height: 64px;" src="/./../images/logo1.png" alt="")
+          a.sidenav-trigger(href="#" data-target="mobile-demo")
+            i.material-icons menu
+          ul(class="right hide-on-med-and-down")#nav-mobile
+            li
+              a.dropdown-trigger(href="#!" data-target="dropdown1") Categorias
+                i(class = "small right material-icons") keyboard_arrow_down
+            li
+              a(href="./send.html") Enviar
+                i(class = "right material-icons") send
+            li
+              a(href="./account.html") Account
+                i(class="right material-icons") account_circle
