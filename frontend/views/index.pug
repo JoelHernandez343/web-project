@@ -32,7 +32,7 @@ html
           i(class="right material-icons") account_circle
 
     div.navbar-fixed#heading
-      nav(class="center right nav-extended indigo darken-3-text s8 m8 l8")
+      nav(class="center right nav-extended grey darken-4 s8 m8 l8")
         div(class="nav-wrapper ")
           a(class="brand-logo white-text" href="#")
             img(style="max-height: 64px;" src="/./../images/logo1.png" alt="")
@@ -49,24 +49,59 @@ html
               a(href="./account.html") Account
                 i(class="right material-icons") account_circle
     //-Imágenes deslizantes
-    div.row#bodying
-      div(class="carousel carousel-slider s12 m12 l8")
-        a.carousel-item(href="#one!")
-          img(src="./../images/example.jpg")
-        a.carousel-item(href="#two!")
-          img(src="./../images/images.jpg")
-        a.carousel-item(href="#three!")
-          img(src="./../images/example.jpg")
-        a.carousel-item(href="#four!")
-          img(src="./../images/images.jpg")
-        a.carousel-item(href="#five!")
-          img(src="./../images/example.jpg")
-        a.carousel-item(href="#six!")
-          img(src="./../images/images.jpg")
+    ul.row#bodying
+      div(class="carousel carousel-slider center")
+        div(class="carousel-fixed-item center")
+        div.carousel-item(href="#one!")
+          img(src="./../images/header1.jpg")
+          h2 Welcome
+          p.black-text Encontrarás postales de todo tipo, para toda ocasión
+
+        div.carousel-item(href="#two!")
+          img(src="./../images/header2.jpg")
+          h2 Amor/amistad
+          p.black-text Postales acerca de amor, amistad, sinceridad, afecto, amor, que puedas demostrar hacia una persona cercana a ti.
+          div(class="carousel-fixed-item center")
+            a(class="btn waves-effect white grey-text darken-text-2" href="/amistad.html") Mirar
+
+        div.carousel-item(href="#three!")
+          img(src="./../images/header3.jpg")
+          h2 Conciencia Ambiental
+          p.black-text Postales para promover el amor por lo que nos rodea, cuidar las vaquitas marinas y los bosques.
+          div(class="carousel-fixed-item center")
+            a(class="btn waves-effect white grey-text darken-text-2" href="/ambiente.html") Mirar
+        
+        div.carousel-item(href="#four!")
+          img(src="./../images/header4.jpg")
+          h2 Invitaciones
+          p.black-text Para boda, quince años, bautizos, comuniones, graduaciones o fines de semestre exitosos o no.
+          div(class="carousel-fixed-item center")
+            a(class="btn waves-effect white grey-text darken-text-2" href="/invitaciones.html") Mirar
+
+        div.carousel-item(href="#five!")
+          img(src="./../images/header5.jpg")
+          h2 Animales
+          p.black-text Cerditos, pájaros, cobayas, ratones, ranas, perros, gatos, caballos, leones, llamas, alpacas, serpientes, mariposas.
+          div(class="carousel-fixed-item center")
+            a(class="btn waves-effect white grey-text darken-text-2" href="/animales.html") Mirar
+        
+        div.carousel-item(href="#six!")
+          img(src="./../images/header6.jpg")
+          h2 Festividades
+          p.black-text Navidad, Año Nuevo, Día de muertos, 10 de mayo, Primavera, Verano, Otoño, Invierno, Día del amor.
+          div(class="carousel-fixed-item center")
+            a(class="btn waves-effect white grey-text darken-text-2" href="/ambiente.html") Mirar
+
+        div.carousel-item(href="#seven!")
+          img(src="./../images/header7.jpg")
+          h2 Felicitación
+          p.black-text Feliz cumpleaños, Feliz aniversario, Feliz graduación, Feliz Día del Ingeniero.
+          div(class="carousel-fixed-item center")
+            a(class="btn waves-effect white grey-text darken-text-2" href="/ambiente.html") Mirar
       
       //-Más populares
 
-      ul(class="center amber-text s12 m12 l12")
+      ul(class="center black-text s12 m12 l12")
           h4.brand-logo(href="#!") Más populares
             i(class="small material-icons") &nbspgrade
       

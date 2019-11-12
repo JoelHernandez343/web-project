@@ -1,14 +1,9 @@
         body {
-            background-image: url("./../images/font3.jpg");
-            opacity: 1000;
+            /*background-image: url("./../images/font3.jpg");
+            opacity: 1000;*/
         }
         
         #bodying {
-            margin-left: 2cm;
-            margin-right: 2cm;
-        }
-        
-        #heading {
-            margin-left: 0cm;
-            margin-right: 0cm;
+            margin-left: 1cm;
+            margin-right: 1cm;
         }
