@@ -1,0 +1,34 @@
+create table persona(
+idPersona int not null primary key,
+correo varchar(40),
+fechaNacimiento Date,
+genero int,
+contrasena varchar(15),
+nombre varchar(15),
+apPaterno varchar(15),
+apMaterno varchar(15),
+idEnvio int
+foreign key(idEnvio) references envios(idEnvio)
+on delete cascade on update cascade
+);
+
+create table envios(
+idEnvio int not null primary key,
+remitente varchar(40),
+destinatario varchar(40),
+fechaTiempo DateTime,
+idPersona int, 
+foreign key(idPersona) references persona(idPersona)
+on delete cascade on update cascade
+);
+
+create table postal(
+idPostal int not null primary key,
+nombre varchar(30),
+tema varchar(30),
+likes int, 
+estado varchar(1),
+idEnvio int,
+foreign key(idEnvio) references envios (idEnvio) 
+on delete cascade on update cascade
+);
