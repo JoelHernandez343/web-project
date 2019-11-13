@@ -1,0 +1,7 @@
+mixin carousel-item(title, description, img_Source, reference, button_text)
+        div.carousel-item(href="#")
+          img(src= `${img_Source}`)
+          h2= `${title}`
+          p.black-text= `${description}`
+          div(class="carousel-fixed-item center")
+            a(class="btn waves-effect white grey-text darken-text-2" href= `${reference}`)= `${button_text}`

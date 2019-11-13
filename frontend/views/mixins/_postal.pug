@@ -1,0 +1,11 @@
+mixin postal(title, content, img_Source, reference, icon)
+  div(class="col s12 m4 l3")
+          .card(href="#")
+            div.card-image
+              img(src= `${img_Source}`)
+              a.card-title= `${title}`
+            div.card-content
+              p= `${content}`
+            div.card-action 
+              a(class="right btn waves-effect white red-text red lighten-4-text-2" href= `${reference}`)
+                i(class="tiny material-icons")(href ="#actionfav")= `${icon}`

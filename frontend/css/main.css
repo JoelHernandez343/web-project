@@ -12,3 +12,22 @@
             margin-left: 1cm;
             margin-right: 1cm;
         }
+        
+        #profile {
+            border-radius: 500px;
+            max-height: 400px;
+            max-width: 400px;
+            margin-top: 1cm;
+            margin-bottom: 1cm;
+            margin-left: 1cm;
+            margin-right: 1cm;
+            vertical-align: center;
+        }
+        
+        #name_profile {
+            margin-top: 1cm;
+            margin-bottom: 1cm;
+            margin-left: 1cm;
+            margin-right: 1cm;
+            vertical-align: 200px;
+        }

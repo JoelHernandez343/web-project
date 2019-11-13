@@ -1,0 +1,73 @@
+doctype html
+html
+  head
+    title Mis Postales
+    link(rel="stylesheet" href="./../css/materialize.min.css")
+    link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+    link(rel="stylesheet" href="./../css/main.css")
+
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+  body  
+    //-function
+    ul.dropdown-content#dropdown1
+      li
+        a(href="./amistad.html") Amistad / Amor
+        a(href="./ambiente.html") Consciencia ambiental
+        a(href="./invitaciones.html") Invitaciones
+        a(href="./animales.html") Animales
+        a(href="./festividades.html") Festividades
+        a(href="./felicitacion.html") Felicitación
+
+    //-Header
+    ul.sidenav#mobile-demo
+      li
+        a.dropdown-trigger(href="#!" data-target="dropdown1") Categorias
+          i(class = "small right material-icons") keyboard_arrow_down
+      li
+        a(href="./send.html") Enviar
+          i(class = "right material-icons") send
+      li
+        //-Aquí que mande al login o a la cuenta si ya la tiene abierta
+        a(href="./account.html") Account 
+          i(class="right material-icons") account_circle
+
+    div.navbar-fixed#heading
+      nav(class="center right nav-extended grey darken-4 s8 m8 l8")
+        div(class="nav-wrapper ")
+          a(class="center brand-logo white-text" href="./index.html")
+            img(style="max-height: 64px;" src="/./../images/logo1.png" alt="")
+          a.sidenav-trigger(href="#" data-target="mobile-demo")
+            i.material-icons menu
+          ul(class="right hide-on-med-and-down")#nav-mobile
+            li
+              a.dropdown-trigger(href="#!" data-target="dropdown1") Categorias
+                i(class = "small right material-icons") keyboard_arrow_down
+            li
+              a(href="./send.html") Enviar
+                i(class = "right material-icons") send
+            li
+              a(href="./account.html") Account
+                i(class="right material-icons") account_circle
+    block content
+
+    //-Footer
+  footer(class="page-footer fixed-container grey darken-4 s12 m12 l12")
+    div.container
+      .row
+        div(class="col 16 s12")
+          h5.white-text Contenido
+          p(class="grey-text text-lighten-4") Descubre el contenido de toda nuestra página.
+        div(class="col l4 offset-l2 s12")
+          h5.white-text Links
+          ul
+            li
+              a(class="grey-text text-lighten-3" href="#!") Contáctanos
+    div.footer-copyright
+      div(class="center container") © 2019 Copyright Tecnologías para la Web, ESCOM IPN
+
+    script(
+      src="https://code.jquery.com/jquery-3.4.1.min.js" 
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" 
+      crossorigin="anonymous")
+    script(type="text/javascript" src="./../js/materialize.min.js")
+    script(type="text/javascript" src="./../js/main.js")

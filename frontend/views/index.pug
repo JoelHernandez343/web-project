@@ -1,158 +1,26 @@
-doctype html
-html
-  head
-    title Mis Postales
-    link(rel="stylesheet" href="./../css/materialize.min.css")
-    link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
-    link(rel="stylesheet" href="./../css/main.css")
-
-    meta(name="viewport" content="width=device-width, initial-scale=1.0")
-  body  
-    //-function
-    ul.dropdown-content#dropdown1
-      li
-        a(href="./amistad.html") Amistad / Amor
-        a(href="./ambiente.html") Consciencia ambiental
-        a(href="./invitaciones.html") Invitaciones
-        a(href="./animales.html") Animales
-        a(href="./festividades.html") Festividades
-        a(href="./felicitacion.html") Felicitación
-
-    //-Header
-    ul.sidenav#mobile-demo
-      li
-        a.dropdown-trigger(href="#!" data-target="dropdown1") Categorias
-          i(class = "small right material-icons") keyboard_arrow_down
-      li
-        a(href="./send.html") Enviar
-          i(class = "right material-icons") send
-      li
-        //-Aquí que mande al login o a la cuenta si ya la tiene abierta
-        a(href="./account.html") Account 
-          i(class="right material-icons") account_circle
-
-    div.navbar-fixed#heading
-      nav(class="center right nav-extended grey darken-4 s8 m8 l8")
-        div(class="nav-wrapper ")
-          a(class="center brand-logo white-text" href="#")
-            img(style="max-height: 64px;" src="/./../images/logo1.png" alt="")
-          a.sidenav-trigger(href="#" data-target="mobile-demo")
-            i.material-icons menu
-          ul(class="right hide-on-med-and-down")#nav-mobile
-            li
-              a.dropdown-trigger(href="#!" data-target="dropdown1") Categorias
-                i(class = "small right material-icons") keyboard_arrow_down
-            li
-              a(href="./send.html") Enviar
-                i(class = "right material-icons") send
-            li
-              a(href="./account.html") Account
-                i(class="right material-icons") account_circle
-
-    //-Imágenes deslizantes
-    ul(class="row s12")#bodying
+extends layouts/_main.pug
+include mixins/_carousel-item.pug
+include mixins/_postal.pug
+block content
+  ul(class="row s12")#bodying
       div(class="carousel carousel-slider center")
-        div(class="carousel-fixed-item center")
-        div.carousel-item(href="#one!")
-          img(src="./../images/header1.jpg")
-          h2 Welcome
-          p.black-text Encontrarás postales de todo tipo, para toda ocasión
-          div(class="carousel-fixed-item center")
-            a(class="btn waves-effect white grey-text darken-text-2" href="./categorias.html") Ver todo
-
-        div.carousel-item(href="#two!")
-          img(src="./../images/header2.jpg")
-          h2 Amor/amistad
-          p.black-text Postales acerca de amor, amistad, sinceridad, afecto, amor, que puedas demostrar hacia una persona cercana a ti.
-          div(class="carousel-fixed-item center")
-            a(class="btn waves-effect white grey-text darken-text-2" href="./amistad.html") Mirar
-
-        div.carousel-item(href="#three!")
-          img(src="./../images/header3.jpg")
-          h2 Conciencia Ambiental
-          p.black-text Postales para promover el amor por lo que nos rodea, cuidar las vaquitas marinas y los bosques.
-          div(class="carousel-fixed-item center")
-            a(class="btn waves-effect white grey-text darken-text-2" href="./ambiente.html") Mirar
-        
-        div.carousel-item(href="#four!")
-          img(src="./../images/header4.jpg")
-          h2 Invitaciones
-          p.black-text Para boda, quince años, bautizos, comuniones, graduaciones o fines de semestre exitosos o no.
-          div(class="carousel-fixed-item center")
-            a(class="btn waves-effect white grey-text darken-text-2" href="./invitaciones.html") Mirar
-
-        div.carousel-item(href="#five!")
-          img(src="./../images/header5.jpg")
-          h2 Animales
-          p.black-text Cerditos, pájaros, cobayas, ratones, ranas, perros, gatos, caballos, leones, llamas, alpacas, serpientes, mariposas.
-          div(class="carousel-fixed-item center")
-            a(class="btn waves-effect white grey-text darken-text-2" href="./animales.html") Mirar
-        
-        div.carousel-item(href="#six!")
-          img(src="./../images/header6.jpg")
-          h2 Festividades
-          p.black-text Navidad, Año Nuevo, Día de muertos, 10 de mayo, Primavera, Verano, Otoño, Invierno, Día del amor.
-          div(class="carousel-fixed-item center")
-            a(class="btn waves-effect white grey-text darken-text-2" href="./festividades.html") Mirar
-
-        div.carousel-item(href="#seven!")
-          img(src="./../images/header7.jpg")
-          h2 Felicitación
-          p.black-text Feliz cumpleaños, Feliz aniversario, Feliz graduación, Feliz Día del Ingeniero.
-          div(class="carousel-fixed-item center")
-            a(class="btn waves-effect white grey-text darken-text-2" href="./felicitacion.html") Mirar
-            
+        +carousel-item("Welcome1","Encontrarás postales de todo tipo, para toda ocasión","./../images/header1.jpg","#", "Ver todo")
+        +carousel-item("Amor/amistad","Postales acerca de amor, amistad, sinceridad, afecto, amor, que puedas demostrar hacia una persona cercana a ti.","./../images/header2.jpg","./amistad.html", "Mirar")
+        +carousel-item("Conciencia Ambiental","Postales para promover el amor por lo que nos rodea, cuidar las vaquitas marinas y los bosques.","./../images/header3.jpg","./ambiente.html", "Mirar")
+        +carousel-item("Animales","Cerditos, pájaros, cobayas, ratones, ranas, perros, gatos, caballos, leones, llamas, alpacas, serpientes, mariposas.","./../images/header5.jpg","./animales.html", "Mirar")
+        +carousel-item("Festividades","Navidad, Año Nuevo, Día de muertos, 10 de mayo, Primavera, Verano, Otoño, Invierno, Día del amor.","./../images/header6.jpg","./festividades.html", "Mirar")
+        +carousel-item("Felicitación","Feliz cumpleaños, Feliz aniversario, Feliz graduación, Feliz Día del Ingeniero.","./../images/header7.jpg","./felicitacion.html", "Mirar")
+      
       //-Más populares
 
       li(class="center black-text s12 m12 l12")
           h4.brand-logo(href="#!") Más populares
             i(class="small material-icons") &nbspgrade
       div.row
-        div(class="col s12 m4 l3")
-          .card
-            div.card-image
-              img(src="/../images/example.jpg")
-              span.card-title Older
-            div.card-content
-              p Description of the postal.
-            div.card-action
-              p First most popular 
-              a(class="right btn waves-effect white red-text red lighten-4-text-2" href="/statistics.html")
-                i(class="tiny material-icons")(href ="mobile.html") favorite
-        div(class="col s12 m4 l3")
-          .card
-            div.card-image
-              img(src="/../images/images.jpg")
-              span.card-title Two
-            div.card-content
-              p Description of the postal.
-            div.card-action
-              p Second most popular 
-              a(class="right btn waves-effect white red-text red lighten-4-text-2" href="/statistics.html")
-                i(class="tiny material-icons")(href ="mobile.html") favorite
-        div(class="col s12 m4 l3")
-          .card
-            div.card-image
-              img(src="/../images/threejpg.jpg")
-              span.card-title Three
-            div.card-content
-              p Description of the postal.
-            div.card-action
-              p Third most popular 
-              a(class="right btn waves-effect white red-text red lighten-4-text-2" href="/statistics.html")
-                i(class="tiny material-icons")(href ="mobile.html") favorite
-        div(class="col s12 m4 l3")
-          .card
-            div.card-image
-              img(src="/../images/example.jpg")   
-              span.card-title Fourth
-            div.card-content
-              p Description of the postal.           
-            div.card-action   
-              p More popular   
-              a(class="right btn waves-effect white grey-text darken-text-2" href="/statistics.html") View more
-                i(class="tiny material-icons")(href ="mobile.html") &nbspmore
-
+        +postal(title,content,"./../images/example.jpg",reference,"favorite")
+        +postal(title,content,"./../images/example.jpg",reference,"favorite")
+        +postal(title,content,"./../images/example.jpg",reference,"favorite")
+        +postal(title,content,"./../images/example.jpg",reference,"more")
       p
 
       //-Más enviadas
@@ -160,71 +28,8 @@ html
       ul(class="center black-text s12 m12 l12")
           h4.brand-logo(href="#!") Más enviadas
             i(class="small material-icons") &nbspsend
-      ul.row
-        div(class="col s12 m4 l3")
-          .card
-            div.card-image
-              img(src="/../images/example.jpg")
-              span.card-title First
-            div.card-content
-              p Description of the postal.
-            div.card-action
-              p First most sent 
-              a(class="right btn waves-effect white red-text red lighten-4-text-2" href="/statistics.html")
-                i(class="tiny material-icons")(href ="mobile.html") favorite
-        div(class="col s12 m4 l3")
-          .card
-            div.card-image
-              img(src="/../images/images.jpg")
-              span.card-title Two
-            div.card-content
-              p Description of the postal.
-            div.card-action
-              p Second most sent 
-              a(class="right btn waves-effect white red-text red lighten-4-text-2" href="/statistics.html")
-                i(class="tiny material-icons")(href ="mobile.html") favorite
-        div(class="col s12 m4 l3")
-          .card
-            div.card-image
-              img(src="/../images/threejpg.jpg")
-              span.card-title Three
-            div.card-content
-              p Description of the postal.
-            div.card-action
-              p Third most sent 
-              a(class="right btn waves-effect white red-text red lighten-4-text-2" href="/statistics.html")
-                i(class="tiny material-icons")(href ="mobile.html") favorite
-        div(class="col s12 m4 l3")
-          .card
-            div.card-image
-              img(src="/../images/example.jpg")   
-              span.card-title Fourth
-            div.card-content
-              p Description of the postal.           
-            div.card-action   
-              p More sent   
-              a(class="right btn waves-effect white grey-text darken-text-2" href="/statistics.html") View more
-                i(class="tiny material-icons")(href ="mobile.html") &nbspmore
-  
-  
-    //-Footer
-  footer(class="page-footer fixed-container grey darken-4 s12 m12 l12")
-    div.container
-      .row
-        div(class="col 16 s12")
-          h5.white-text Contenido
-          p(class="grey-text text-lighten-4") Descubre el contenido de toda nuestra página.
-        div(class="col l4 offset-l2 s12")
-          h5.white-text Links
-          ul
-            li
-              a(class="grey-text text-lighten-3" href="#!") Contáctanos
-    div.footer-copyright
-      div(class="center container") © 2019 Copyright Tecnologías para la Web, ESCOM IPN
-
-    script(
-      src="https://code.jquery.com/jquery-3.4.1.min.js" 
-      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" 
-      crossorigin="anonymous")
-    script(type="text/javascript" src="./../js/materialize.min.js")
-    script(type="text/javascript" src="./../js/main.js")
+      div.row
+        +postal(title,content,"./../images/example.jpg",reference,"favorite")
+        +postal(title,content,"./../images/example.jpg",reference,"favorite")
+        +postal(title,content,"./../images/example.jpg",reference,"favorite")
+        +postal(title,content,"./../images/example.jpg",reference,"more")
