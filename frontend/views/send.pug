@@ -1,14 +1,28 @@
-doctype html
-html
-  head
-    title Mis Postales
-    link(rel="stylesheet" href="./../css/materialize.min.css")
-    link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
-    link(rel="stylesheet" href="./../css/main.css")
-
-    meta(name="viewport" content="width=device-width, initial-scale=1.0")
-  body
-    ul.row
+extends layouts/_main.pug
+include mixins/_usuario.pug
+block content
+    ul(class="row center s12 m12 l12")
+      h2#titleSignPostal Send Postal
+      p Envía una postal a quien tu quieras (con e-mail).
+    ul(class="row center")#bodying
+      div(class="right col s12 m8 l6")
+        //-aquí va la postal a enviar
+        img(src="./../images/anouncement.jpg")#anouncement
       //-send
-      div(class="col s12 m4 l3")
+      div(class="left col s12 m4 l6 blue-text accent-4")
+        div(class="center input-field s12")
+          i(class="amber-text material-icons prefix") email
+          input(disabled id="my_email" type="email" class="validate")
+          label(for="my_email") From
+          span.helper-text Tu correo
+        div(class="center input-field s12")
+          i(class="green-text material-icons prefix") email
+          input(id="to_email" type="email" class="validate")
+          label(for="to_email") To
+          span.helper-text(data-error="Incompleto, corrige tus datos" data-success="Correcto") Ingresa el correo destino
         
+        div(class="center input-field col s12 m12 l12")
+          textarea(id="message" class="materialize-textarea")
+          label(for="message") Escribe una dedicatoria
+          span.helper-text (opcional)
+          

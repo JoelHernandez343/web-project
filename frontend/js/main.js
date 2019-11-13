@@ -1,7 +1,3 @@
-$(document).ready(function() {
-    $('.sidenav').sidenav();
-});
-
 $('.carousel.carousel-slider').carousel({
     fullWidth: true,
     indicators: true
@@ -10,9 +6,9 @@ $('.carousel.carousel-slider').carousel({
 $('.dropdown-trigger').dropdown();
 
 $(document).ready(function() {
+    $('.sidenav').sidenav();
     $('.modal').modal();
-});
-
-$(document).ready(function() {
     $('.parallax').parallax();
+    $('select').formSelect();
+    $('.datepicker').datepicker();
 });

@@ -1,0 +1,45 @@
+extends layouts/_main.pug
+include mixins/_usuario.pug
+block content
+    ul(class="row center s12 m12 l12")
+      h2#titleSign Sign up
+      p Únete a nuestra comunidad.
+    ul(class="row center")#bodying
+      div(class="left col s12 m8 l6")
+        img(src="./../images/anouncement.jpg")#anouncement
+      //-send
+      div(class="right col s12 m4 l6 blue-text accent-4")
+        div(class="center input-field s12")
+          i(class="material-icons prefix") account_circle
+          input(id="icon_prefix" type="text" class="validate")
+          label(for="icon_prefix") Nombre
+          span.helper-text(data-error="Incompleto, corrige tus datos" data-success="Correcto") Ingresa tu nombre completo
+        
+        div(class="center input-field col s12 m12 l6")
+          i(class="material-icons prefix") perm_contact_calendar
+          input(id="icon_data" type="text" class="datepicker")
+          label(for="icon_data") Fecha de nacimiento
+          span.helper-text(data-error="Elige una fecha válida" data-success="Correcto") Ingresa tu fecha de nacimiento
+
+        div(class="center input-field col s12 m12 l6")
+          i(class="material-icons prefix") email
+          input(id="icon_email" type="email" class="validate")
+          label(for="icon_email") Email
+          span.helper-text(data-error="Incompleto, corrige tus datos" data-success="Correcto") Ingresa tu correo
+        
+        div(class="center input-field col s12 m12 l6")
+          select
+            option(value="" disabled selected) Selecciona tu género
+            option(value="F") Femenino
+            option(value="M") Masculino
+          label(for="icon_gen")
+            i(class="tiny material-icons") perm_identity
+            label Género
+
+        div(class="center file-field input-field col s12 m12 l6")
+          div(class="left btn blue accent-4")
+            span Subir
+            input(type="file" images)
+          div.file-path-wrapper
+            input(class="file-path validate" type="text" placeholder="Carga tu foto")
+            span.helper-text Elige una imagen de perfil

@@ -37,6 +37,57 @@
             vertical-align: 200px;
         }
         
+        #anouncement {
+            max-width: 400px;
+            vertical-align: center;
+        }
+        
         .parallax-container {
             height: 300px;
+        }
+        /* label color */
+        
+        .input-field label {
+            color: #757575;
+        }
+        /* label focus color */
+        
+        .input-field input[type=text]:focus+label {
+            color: #757575;
+        }
+        /* label underline focus color */
+        
+        .input-field input[type=text]:focus {
+            border-bottom: 1px solid #757575;
+            box-shadow: 0 1px 0 0 #757575;
+        }
+        /* valid color */
+        
+        .input-field input[type=text].valid {}
+        /* invalid color */
+        
+        .input-field input[type=text].invalid {
+            border-bottom: 1px solid #d50000;
+            box-shadow: 0 1px 0 0 #ff8a80;
+        }
+        /* icon prefix focus color */
+        
+        .input-field .prefix.active {
+            color: #000000;
+        }
+        
+        #titleSign {
+            color: #368abb
+        }
+        
+        #titleSignPostal {
+            color: #790e73
+        }
+        
+        .datepicker-date-display {
+            background-color: #534e4e
+        }
+        
+        .datepicker-table-wrapper {
+            color: rgb(62, 65, 65)
         }
