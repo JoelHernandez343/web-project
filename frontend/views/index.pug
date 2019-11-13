@@ -4,9 +4,10 @@ include mixins/_postal.pug
 block content
   ul(class="row s12")#bodying
       div(class="carousel carousel-slider center")
-        +carousel-item("Welcome","Encontrarás postales de todo tipo, para toda ocasión","./../images/header1.jpg","#", "Ver todo")
+        +carousel-item("Welcome","Encontrarás postales de todo tipo, para toda ocasión","./../images/header1.jpg","./categorias.html", "Ver todo")
         +carousel-item("Amor/amistad","Postales acerca de amor, amistad, sinceridad, afecto, amor, que puedas demostrar hacia una persona cercana a ti.","./../images/header2.jpg","./amistad.html", "Mirar")
         +carousel-item("Conciencia Ambiental","Postales para promover el amor por lo que nos rodea, cuidar las vaquitas marinas y los bosques.","./../images/header3.jpg","./ambiente.html", "Mirar")
+        +carousel-item("Invitaciones","De cumpleaños, graduación, Boda, Día de las madres o solo por festejar","./../images/header4.jpg","./invitaciones.html", "Mirar")
         +carousel-item("Animales","Cerditos, pájaros, cobayas, ratones, ranas, perros, gatos, caballos, leones, llamas, alpacas, serpientes, mariposas.","./../images/header5.jpg","./animales.html", "Mirar")
         +carousel-item("Festividades","Navidad, Año Nuevo, Día de muertos, 10 de mayo, Primavera, Verano, Otoño, Invierno, Día del amor.","./../images/header6.jpg","./festividades.html", "Mirar")
         +carousel-item("Felicitación","Feliz cumpleaños, Feliz aniversario, Feliz graduación, Feliz Día del Ingeniero.","./../images/header7.jpg","./felicitacion.html", "Mirar")

@@ -1,0 +1,17 @@
+mixin usuario(profileImageSource,name, email, age)
+      div
+        .row
+          div(class="col 20 s12 m6 l6")
+            //- nombre del usuario
+            img(class="right" style="max-height: 200px;" src= `${profileImageSource}` alt="")#profile
+          div(class="s12 m6 l6")
+            h3.left-align#name_profile Hello
+            //- nombre del usuario
+            h2.left-align#name_profile= `${name}`
+      div
+          h5(class="center")= "Nombre: "+`${name}`
+            a(class="material-icons grey-text" href="./index.html") &nbspedit
+          h5(class="center")= "Email: "+`${email}`
+            a(class="material-icons grey-text" href="./index.html") &nbspedit
+          h5(class="center")= "Edad: "+`${age}`
+            a(class="material-icons grey-text" href="./index.html") &nbspedit
