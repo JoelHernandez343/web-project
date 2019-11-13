@@ -8,3 +8,7 @@ $('.carousel.carousel-slider').carousel({
 });
 
 $('.dropdown-trigger').dropdown();
+
+$(document).ready(function() {
+    $('.modal').modal();
+});

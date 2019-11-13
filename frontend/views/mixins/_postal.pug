@@ -8,4 +8,18 @@ mixin postal(title, content, img_Source, reference, icon)
               p= `${content}`
             div.card-action 
               a(class="right btn waves-effect white red-text red lighten-4-text-2" href= `${reference}`)
-                i(class="tiny material-icons")(href ="#actionfav")= `${icon}`
+                i(class="tiny material-icons")(href ="#actionfav") favorite
+              a(class="right btn modal-trigger waves-effect white grey-text red lighten-4-text-2" href= "#modal1")
+                i(class="tiny material-icons")(href ="#") remove_red_eye
+
+  div(class="modal modal-fixed-footer")#modal1
+    .modal-content
+      div(class="col s12 m12 l12")
+        .card(href="#")
+          div.card-image
+            img(src= `${img_Source}`)
+            a.card-title= `${postalTitle}`
+          div.card-content
+            p= `${postalDescription}`
+    .modal-footer
+      a(class="modal-close waves-effect waves-green btn-flat" href="./send.html") Send
