@@ -6,7 +6,7 @@ block content
       p Únete a nuestra comunidad.
     ul(class="row center")#bodying
       div(class="left col s12 m8 l6")
-        img(src="./../images/anouncement.jpg")#anouncement
+        img(src="./../images/anouncement.jpg" style="width:100%;")#anouncement
       //-send
       div(class="right col s12 m4 l6 blue-text accent-4")
         div(class="center input-field s12")
@@ -17,8 +17,8 @@ block content
         
         div(class="center input-field col s12 m12 l6")
           i(class="material-icons prefix") perm_contact_calendar
-          input(id="icon_data" type="text" class="datepicker")
-          label(for="icon_data") Fecha de nacimiento
+          input(id="fecha" type="text" class="datepicker")
+          label(for="fecha") Fecha de nacimiento
           span.helper-text(data-error="Elige una fecha válida" data-success="Correcto") Ingresa tu fecha de nacimiento
 
         div(class="center input-field col s12 m12 l6")
@@ -43,3 +43,6 @@ block content
           div.file-path-wrapper
             input(class="file-path validate" type="text" placeholder="Carga tu foto")
             span.helper-text Elige una imagen de perfil
+      div(class="center btn green accent-4")
+        a(class="white-text" href="./account.html") Registrarse
+          i(class = "right material-icons") plus_one

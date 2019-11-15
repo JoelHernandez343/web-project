@@ -38,8 +38,8 @@
         }
         
         #anouncement {
-            max-width: 400px;
-            vertical-align: center;
+            width: 100%;
+            height: auto;
         }
         
         .parallax-container {
@@ -77,11 +77,11 @@
         }
         
         #titleSign {
-            color: #368abb
+            color: #13c740
         }
         
         #titleSignPostal {
-            color: #790e73
+            color: #f06e17
         }
         
         .datepicker-date-display {

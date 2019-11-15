@@ -1,0 +1,18 @@
+extends layouts/_main.pug
+include mixins/_postal.pug
+block content
+    ul(class="row center")#bodying
+      div(class="col s12 m12 l12" style="max-height=100%")
+        img(src="./../images/branch5.jpg")#anouncement
+      //-Se ponen todas las postales que hayan para esa categoría
+      ul.row
+        +postal(title,content,"./../images/anouncement.jpg","#","favorite")
+        +postal(title,content,"./../images/anouncement.jpg","#","favorite")
+        +postal(title,content,"./../images/anouncement.jpg","#","favorite")
+        +postal(title,content,"./../images/anouncement.jpg","#","favorite")
+        +postal(title,content,"./../images/anouncement.jpg","#","favorite")
+        +postal(title,content,"./../images/anouncement.jpg","#","favorite") 
+        +postal(title,content,"./../images/example.jpg","#","favorite")
+        +postal(title,content,"./../images/example.jpg","#","favorite")
+        +postal(title,content,"./../images/anouncement.jpg","#","favorite")
+        +postal(title,content,"./../images/anouncement.jpg","#","favorite")
