@@ -23,3 +23,8 @@ $(function() {
         yearRange: 10,
     });
 });
+
+$('.carousel').carousel();
+setInterval(function() {
+    $('.carousel').carousel('next');
+}, 3500); // every 3.5 seconds
