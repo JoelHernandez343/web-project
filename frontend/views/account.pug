@@ -1,5 +1,35 @@
 extends layouts/_main.pug
 include mixins/_usuario.pug
+include mixins/_row_history.pug
 block content
-    div#bodying_user
-      +usuario("./../images/profile1.jpg", "José Antonio", "jaoares@gmail.com", "23")
+    ul(class="row center")#bodying_user
+      +usuario("./../images/profile1.jpg", "José Antonio", "jaoares@gmail.com", "23/08/1999")
+    ul(class="row center")#bodying
+      div(class="left col s12 m6 l6")
+        ul.collapsible
+          li
+            div.collapsible-header
+              i.material-icons card_membership 
+              a(class="black-text") Enviadas
+              //-Número de postales enviadas
+              span(class="new badge amber") 4
+            div.collapsible-body
+              ul(class="row center")#titlerow
+                div(class="center col s6 m8 l8") Historial
+                div(class="center col s6 m4 l4") Fecha
+              +row_history("Hola, mai friend", "18/03/19", "index.html/hola")
+              +row_history("Querida Trixie", "01/12/18", "index.html/hola")
+      div(class="left col s12 m6 l6")
+        ul.collapsible
+          li
+            div.collapsible-header
+              i.material-icons card_giftcard 
+              a(class="black-text") Recibidas
+              //-Número de postales enviadas
+              span(class="new badge green") 4
+            div.collapsible-body
+              ul(class="row center")#titlerow
+                div(class="center col s6 m8 l8") Historial
+                div(class="center col s6 m4 l4") Fecha
+              +row_history("Hola, soy yo de nuevo", "18/03/19", "index.html/hola")
+              +row_history("Que ondii", "01/12/18", "index.html/hola")

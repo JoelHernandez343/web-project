@@ -1,0 +1,26 @@
+mixin login_window()
+    div
+      ul(class="row center s12 m12 l12")
+        h2#titleLog Ingresar
+        p Entra a tu cuenta.
+        div(class="left col s12 m3 l4 blue-text accent-4")
+
+        div(class="center col s12 m6 l4 blue-text accent-4")
+          div(class="center input-field col s12 m12 l12")
+            i(class="material-icons prefix grey-text") email
+            input(id="icon_email" type="email" class="validate")
+            label(for="icon_email") Email
+            span.helper-text(data-error="Incorrecto, corrige tus datos" data-success="") Ingresa tu correo
+          div(class="center input-field col s12 m12 l12")
+            i(class="material-icons prefix amber-text") vpn_key
+            input(id="contra" type="password" class="validate")
+            label(for="contra") Contraseña
+            span.helper-text(data-error="Incorrecto, corrige tus datos" data-success="") Ingresa tu contraseña
+
+          div(class="center btn red accent-4")
+            a(class="white-text" href="./account.html") Entrar
+              i(class = "right material-icons") account_balance_wallet
+        
+        div(class="right col s12 m3 l4 blue-text accent-4")
+
+    .modal-footer

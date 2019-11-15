@@ -80,6 +80,10 @@
             color: #13c740
         }
         
+        #titleLog {
+            color: #c71313
+        }
+        
         #titleSignPostal {
             color: #f06e17
         }
@@ -90,4 +94,13 @@
         
         .datepicker-table-wrapper {
             color: rgb(62, 65, 65)
+        }
+        
+        #titlerow {
+            font-weight: bolder;
+        }
+        
+        #datauser {
+            font-size: .5cm;
+            font-weight: normal;
         }

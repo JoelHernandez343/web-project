@@ -1,4 +1,4 @@
-mixin usuario(profileImageSource,name, email, age)
+mixin usuario(profileImageSource,name, email, date)
       div
         .row
           div(class="col 20 s12 m6 l6")
@@ -9,9 +9,42 @@ mixin usuario(profileImageSource,name, email, age)
             //- nombre del usuario
             h2.left-align#name_profile= `${name}`
       div
-          h5(class="center")= "Nombre: "+`${name}`
-            a(class="material-icons grey-text" href="./index.html") &nbspedit
-          h5(class="center")= "Email: "+`${email}`
-            a(class="material-icons grey-text" href="./index.html") &nbspedit
-          h5(class="center")= "Edad: "+`${age}`
-            a(class="material-icons grey-text" href="./index.html") &nbspedit
+        .row
+          div(class="col 20 s12 m4 l4")
+            h4(class="left")#titlerow Mis datos
+          div(class="center col 20 s12 m8 l8")
+            div(class="center input-field s12")
+              i(class="material-icons prefix") account_circle
+              input(disabled id="icon_prefix" type="text" class="validate")
+              label(for="icon_prefix")= `${name}`
+              span.helper-text() Nombre
+              i(class="right tiny material-icons")
+                a(class="grey-text" href= "./index.html") &nbspmode_edit 
+            
+            div(class="center input-field col s12 m12 l6")
+              i(class="material-icons prefix") perm_contact_calendar
+              input(disabled id="fecha" type="text" class="validate")
+              label(for="fecha")= `${date}`
+              span.helper-text() Fecha de nacimiento
+              i(class="right tiny material-icons")
+                a(class="grey-text" href= "./index.html") &nbspmode_edit 
+            
+
+            div(class="center input-field col s12 m12 l6")
+              i(class="material-icons prefix") email
+              input(id="icon_email" type="email" class="validate")
+              label(for="icon_email")= `${email}`
+              span.helper-text(data-error="Incompleto, corrige tus datos" data-success="Correcto") Email
+              i(class="right tiny material-icons")
+                a(class="grey-text" href= "./index.html") &nbspmode_edit
+            
+            div(class="center input-field col s12 m12 l6")
+              select(disabled)
+                option(value="" disabled selected) Selecciona tu género
+                option(value="F") Femenino
+                option(value="M") Masculino
+              label(for="icon_gen")
+                i(class="tiny material-icons") perm_identity
+                label Género
+              i(class="right tiny material-icons")
+                a(class="grey-text" href= "./index.html") &nbspmode_edit

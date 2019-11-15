@@ -1,0 +1,6 @@
+mixin row_history(name, date, link)
+  ul(class="row center")
+    div(class="center col s6 m8 l8")= `${name}`
+      i(class="tiny material-icons")
+        a(class="grey-text" href= `${link}`) &nbspnear_me
+    div(class="center col s6 m4 l4")= `${date}`
