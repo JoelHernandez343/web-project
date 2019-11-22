@@ -1,13 +1,13 @@
+
 <?php
-    //$dbname = 'prueba';
-    //$username = 'root';
-    //$password = "root";
     include("./confiBD.php");
+    $sql="SELECT * FROM administrador WHERE status ='1'";
+    $result=mysqli_query($conexion, $sql);
+    if(mysqli_num_rows($result)==0){
+        header("Location: loginAdmin.php");
+        exit();
+    }
     try {
-        //Categorías
-        
-        //$conexion = new PDO("mysql:host=localhost;dbname=$dbname", $username, $password);
-        //$conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $result = $conexion->query('SELECT cate, sum(likes) FROM postal GROUP by cate');
         $rows = array();
         $table = array();
@@ -100,6 +100,11 @@
 
     <html>
       <head>
+        <title>Mis Postales</title>
+        <link rel="stylesheet" href="./../frontend/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="./../frontend/css/main.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script type="text/javascript" src="https://www.google.com/jsapi"></script>
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
         <script type="text/javascript">
@@ -165,12 +170,30 @@
       </head>
 
       <body>
-        <div id="chart_postales"></div>
-        <div id="chart_cate"></div>
-        <div id="columnchart_material" style="width: 800px; height: 500px;"></div>
-        <div id="chart_envios"></div>
+        <div class="navbar-fixed" id="heading">
+          <nav class="center right nav-extended grey darken-4 s8 m8 l8">
+            <div class="nav-wrapper "><a class="center brand-logo white-text" href="./../frontend/views/index.html"><img style="max-height: 64px;" src="./../frontend/images/logo1.png" alt=""></a><a class="sidenav-trigger" href="#" data-target="mobile-demo"><i class="material-icons">menu</i></a>
+              <ul class="right hide-on-med-and-down" id="nav-mobile">
+                <li style="font-size:30px">Estadi&#769sticas&nbsp&nbsp</li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+        <div id="chart_postales" class="center container"></div>
+        <hr size="2" noshade>
+        <div id="chart_cate" class="center container"></div>
+        <div id="columnchart_material" class="center container" style="width: 800px; height: 500px;"></div>
+        <div id="chart_envios" class="center container" ></div>
         <div>
-          <a href="./perfilAdmin.php" class="orange-text">Cancelar / Regresar</a>
+          <a href="./perfilAdmin.php" class="black-text">Cancelar / Regresar</a>
         </div>
       </body>
+      <footer>
+      <div class="footer-copyright">
+      <div class="center container">© 2019 Copyright Tecnologías para la Web, ESCOM IPN</div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./../frontend/js/materialize.min.js"></script>
+    <script type="text/javascript" src="./../frontend/js/main.js"></script>
+      </footer>
     </html>

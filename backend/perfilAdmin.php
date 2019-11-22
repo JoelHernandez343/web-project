@@ -1,3 +1,20 @@
+<?php
+    include("./confiBD.php");
+    $sql="SELECT * FROM administrador WHERE status ='1'";
+    $result=mysqli_query($conexion, $sql);
+    if(mysqli_num_rows($result)==0){
+        header("Location: loginAdmin.php");
+        exit();
+    }
+    if(isset($_POST['submit'])){
+        $sql="UPDATE administrador
+        SET status = '0'
+        WHERE usuarioAdmin = 'Admin'";
+        $result=mysqli_query($conexion, $sql);
+        header("Location: loginAdmin.php");
+        exit();
+    }
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,16 +38,16 @@
 <body>
     <main>
         <div class="container">
-            <form id="formRegistro" autocomplete="off">
             <div class="row">
                 <div class="col s12 input-field">
                 <a href="./estadisticas.php" class="orange-text">Ver estadísticas</a>
                 </div>
             </div>
-            </form>
+            <form action="" method="POST">
             <div class="row right">
-                <a href="./../frontend/views/loginAdmin.html" class="orange-text">Cancelar / Regresar</a>
+                <button class="orange-text" name="submit">Cerrar session</button>
             </div>
+            </form>
         </div>
     </main>
 </body>
