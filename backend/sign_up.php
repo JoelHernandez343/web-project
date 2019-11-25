@@ -2,9 +2,9 @@
     include("./confiBD.php");
     $db_table_name ="persona";
     //Creamos el registro
-    $sub_name = utf8_decode($_POST['icon_prefix']);//nombre completo
-    $sub_apPaterno = utf8_decode($_POST['icon_prefix_paterno']); //Cambiar el html
-    $sub_apMaterno = utf8_decode($_POST['icon_prefix_materno']); //Cambiar el html 
+    $sub_name = utf8_decode($_POST['name']);//nombre completo
+    $sub_apPaterno = utf8_decode($_POST['apPterno']); //Cambiar el html
+    $sub_apMaterno = utf8_decode($_POST['apMaterno']); //Cambiar el html 
     $sub_fecha = utf8_decode($_POST['fecha']);
     $sub_contrasena = utf8_decode($_POST['contrasena']);
     $sub_email = utf8_decode($_POST['icon_email']);
