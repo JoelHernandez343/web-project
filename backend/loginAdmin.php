@@ -1,5 +1,11 @@
 <?php
     include("./confiBD.php");
+    $sql="SELECT * FROM administrador WHERE status ='0'";
+    $result=mysqli_query($conexion, $sql);
+    if(mysqli_num_rows($result)==0){
+        header("Location: perfilAdmin.php");
+        exit();
+    }
     if(isset($_POST['usuario'])){
         $uname=$_POST['usuario'];
         $pass=$_POST['contrasena'];
