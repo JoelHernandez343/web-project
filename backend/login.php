@@ -1,4 +1,5 @@
-<?php 
+<?php
+    session_start(); 
     include("./confiBD.php");
     if(isset($_POST['email'])){
         $correo=$_POST['email'];

@@ -1,8 +1,12 @@
 <?php
   session_start();
-  
-?>
+  $varsesion =$_SESSION['usuario'];
+  if($varsesion == null || $varsesion='')
+  {
+    echo "NO definida";
+  }
 
+?>
 
 <!DOCTYPE html>
 <html>
@@ -39,7 +43,7 @@
           <div class="col 20 s12 m6 l6"><img class="right" style="max-height: 200px;" src="./../images/profile1.jpg" alt="" id="profile"/></div>
           <div class="s12 m6 l6">
             <h3 class="left-align" id="name_profile">Hello</h3>
-            <h2 class="left-align" id="name_profile">José Antonio</h2>
+            <h2 class="left-align" id="name_profile">BENBENOU: </h2>
           </div>
         </div>
       </div>
