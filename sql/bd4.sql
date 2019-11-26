@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Nov 24, 2019 at 06:55 AM
+-- Generation Time: Nov 26, 2019 at 08:11 PM
 -- Server version: 5.7.26
 -- PHP Version: 7.2.18
 
@@ -85,7 +85,7 @@ CREATE TABLE IF NOT EXISTS `persona` (
 --
 
 INSERT INTO `persona` (`idPersona`, `correo`, `fechaNacimiento`, `contrasena`, `nombre`, `apPaterno`, `apMaterno`, `edad`, `genero`) VALUES
-(1, 'joelcito@hotmail.com', '1999-11-13', 'joelcitoMaximo', 'Joel', 'Rar', 'Mar', '20', '0'),
+(1, 'joelcito@hotmail.com', '1999-11-13', 'abcd', 'Joel', 'Rar', 'Mar', '20', '0'),
 (8, 'hola@adio.com', '2019-11-05', 'hola', 'Juan', 'Perez', 'Perez', '19', '0'),
 (9, 'como@estas.com', '2019-10-15', 'lallaala', 'Jennifer', 'Lopez', 'Lopez', '21', '1'),
 (2, 'jakfsj1o@oanfa.com', '2019-09-24', 'ksajflkkaf', 'adriana', 'a', 'a', '20', '1'),

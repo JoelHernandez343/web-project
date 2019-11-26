@@ -20,6 +20,8 @@ fechaTiempo DateTime,
 idPersona int, 
 foreign key(idPersona) references persona(idPersona)
 on delete cascade on update cascade
+foreign key(idPostal) references postal(idPostal)
+on delete cascade on update cascade
 );
 
 create table postal(

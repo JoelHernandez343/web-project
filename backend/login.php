@@ -4,11 +4,15 @@
     if(isset($_POST['email'])){
         $correo=$_POST['email'];
         $pass=$_POST['password'];
-        $sql="SELECT * FROM persona WHERE correo='".$correo."' AND contrasena='".$pass."'";
-        //echo "SELECT * FROM administrador WHERE usuarioAdmin='".$uname."' AND contrasena='".$pass."'" ;
+        $sql="SELECT idPersona FROM persona WHERE correo='".$correo."' AND contrasena='".$pass."'";
+        //echo "SELECT * FROM administrador WHERE correo='".$correo."' AND contrasena='".$pass."'" ;
         $result=mysqli_query($conexion, $sql);
-
+        while($row = mysqli_fetch_array($result))
+        {
+          $id=$row["idPersona"];
+        }
         if(mysqli_num_rows($result)==1){
+          $_SESSION["usuario"]=$_POST['email'];
           header("Location: http://localhost/web_project/frontend/build/account.php");
         }
     }

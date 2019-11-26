@@ -1,12 +1,10 @@
 <?php
   session_start();
-  $varsesion =$_SESSION['usuario'];
-  if($varsesion == null || $varsesion='')
-  {
-    echo "NO definida";
-  }
-
-?>
+  //echo $_SESSION["usuario"];
+  if(isset($_SESSION["usuario"])){
+    include("./../../backend/confiBD.php");
+    include("./../../backend/login_image.php");
+?> 
 
 <!DOCTYPE html>
 <html>
@@ -40,10 +38,10 @@
     <ul class="row center" id="bodying_user">
       <div>
         <div class="row">
-          <div class="col 20 s12 m6 l6"><img class="right" style="max-height: 200px;" src="./../images/profile1.jpg" alt="" id="profile"/></div>
+          <div class="col 20 s12 m6 l6"><img class="right" style="max-height: 200px;" src="<?php echo $foto;  ?>" class="responsive-img" alt="" id="profile"/></div>
           <div class="s12 m6 l6">
-            <h3 class="left-align" id="name_profile">Hello</h3>
-            <h2 class="left-align" id="name_profile">BENBENOU: </h2>
+            <h3 class="left-align" id="name_profile">Hello</h3> 
+            <h2 class="left-align" id="name_profile">BENBENOU:<?php echo "$infPersona[4] $infPersona[5] $infPersona[6]"; ?> </h2>
           </div>
         </div>
       </div>
@@ -55,19 +53,19 @@
           <div class="center col 20 s12 m8 l8">
             <div class="center input-field s12"><i class="material-icons prefix">account_circle</i>
               <input class="validate" disabled="disabled" id="icon_prefix" type="text"/>
-              <label for="icon_prefix">José Antonio</label><span class="helper-text">Nombre</span><i class="right tiny material-icons"><a class="grey-text" href="./index.html">&nbspmode_edit </a></i>
+              <label for="icon_prefix"><?php echo "$infPersona[4] $infPersona[5] $infPersona[6]"; ?></label><span class="helper-text">Nombre</span><i class="right tiny material-icons"><a class="grey-text" href="./index.html">&nbspmode_edit </a></i>
             </div>
             <div class="center input-field col s12 m12 l6"><i class="material-icons prefix">perm_contact_calendar</i>
               <input class="validate" disabled="disabled" id="fecha" type="text"/>
-              <label for="fecha">23/08/1999</label><span class="helper-text">Fecha de nacimiento</span><i class="right tiny material-icons"><a class="grey-text" href="./index.html">&nbspmode_edit </a></i>
+              <label for="fecha"><?php echo $infPersona[2]; ?></label><span class="helper-text">Fecha de nacimiento</span><i class="right tiny material-icons"><a class="grey-text" href="./index.html">&nbspmode_edit </a></i>
             </div>
             <div class="center input-field col s12 m12 l6"><i class="material-icons prefix">email</i>
               <input class="validate" id="icon_email" type="email"/>
-              <label for="icon_email">jaoares@gmail.com</label><span class="helper-text" data-error="Incompleto, corrige tus datos" data-success="Correcto">Email</span><i class="right tiny material-icons"><a class="grey-text" href="./index.html">&nbspmode_edit</a></i>
+              <label for="icon_email"><?php echo $infPersona[1]; ?></label><span class="helper-text" data-error="Incompleto, corrige tus datos" data-success="Correcto">Email</span><i class="right tiny material-icons"><a class="grey-text" href="./index.html">&nbspmode_edit</a></i>
             </div>
             <div class="center input-field col s12 m12 l6">
               <select disabled="disabled">
-                <option value="" disabled="disabled" selected="selected">Selecciona tu género</option>
+                <option value="" disabled="disabled" selected="selected"><?php echo $genero; ?></option>
                 <option value="F">Femenino</option>
                 <option value="M">Masculino</option>
               </select>
@@ -149,3 +147,7 @@
     <script type="text/javascript" src="./../js/main.js"></script>
   </footer>
 </html>
+<?php
+    }else{
+        header("location: http://localhost/web_project/frontend/build/ ");
+    }
