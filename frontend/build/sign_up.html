@@ -31,52 +31,55 @@
       <h2 id="titleSign">Sign up</h2>
       <p>Únete a nuestra comunidad.</p>
     </ul>
-    <form action="./../../backend/sign_up.php" method="POST"></form>
-    <ul class="row center" id="bodying">
-      <div class="left col s12 m8 l6"><img src="./../images/anouncement.jpg" style="width:100%;" id="anouncement"></div>
-      <div class="right col s12 m4 l6 blue-text accent-4">
-        <div class="center input-field s12">
-          <input class="validate" id="nombres" type="text">
-          <label for="nombres">Nombre</label><span class="helper-text" data-error="Incompleto, corrige tus datos" data-success="Correcto"></span>
-        </div>
-        <div class="center input-field s12">
-          <input class="validate" id="apellido_materno" type="text">
-          <label for="apellido_materno">Apellido Materno</label><span class="helper-text" data-error="Incompleto, corrige tus datos" data-success="Correcto"></span>
-        </div>
-        <div class="center input-field s12">
-          <input class="validate" id="apellido_paterno" type="text">
-          <label for="apellido_paterno">Apellido Paterno</label><span class="helper-text" data-error="Incompleto, corrige tus datos" data-success="Correcto"></span>
-        </div>
-        <div class="center input-field col s12 m12 l6"><i class="material-icons prefix">perm_contact_calendar</i>
-          <input class="datepicker" id="fecha" name= "fecha" type="text">
-          <label for="fecha">Fecha de nacimiento</label><span class="helper-text" data-error="Elige una fecha válida" data-success="Correcto">Ingresa tu fecha de nacimiento</span>
-        </div>
-        <div class="center input-field col s12 m12 l6"><i class="material-icons prefix">email</i>
-          <input class="validate" id="icon_email" type="email">
-          <label for="icon_email">Email</label><span class="helper-text" data-error="Incompleto, corrige tus datos" data-success="Correcto">Ingresa tu correo</span>
-        </div>
-        <div class="center input-field col s12 m12 l6">
-          <select>
-            <option value="" disabled selected>Selecciona tu género</option>
-            <option value="1">Femenino</option>
-            <option value="0">Masculino</option>
-          </select>
-          <label for="icon_gen"><i class="tiny material-icons">perm_identity</i>
-            <label>Género</label>
-          </label>
-        </div>
-        <div class="center file-field input-field col s12 m12 l6">
-          <div class="left btn blue accent-4"><span>Subir</span>
-            <input type="file" images>
+  
+    <form id="registro">
+      <ul class="row center" id="bodying">
+        <div class="left col s12 m8 l6"><img src="./../images/anouncement.jpg" style="width:100%;" id="anouncement"></div>
+        <div class="right col s12 m4 l6 blue-text accent-4">
+          <div class="center input-field s12">
+            <input id="nombres" type="text" name= "nombre">
+            <label for="nombres">Nombre</label><span class="helper-text" data-error="Incompleto, corrige tus datos" data-success="Correcto"></span>
           </div>
-          <div class="file-path-wrapper">
-            <input class="file-path validate" type="text" placeholder="Carga tu foto"><span class="helper-text">Elige una imagen de perfil</span>
+          <div class="center input-field s12">
+            <input class="validate" id="apellido_materno" type="text" name= "apellidoMaterno">
+            <label for="apellido_materno">Apellido Materno</label><span class="helper-text" data-error="Incompleto, corrige tus datos" data-success="Correcto"></span>
+          </div>
+          <div class="center input-field s12">
+            <input class="validate" id="apellido_paterno" type="text" name= "apellidoPaterno">
+            <label for="apellido_paterno">Apellido Paterno</label><span class="helper-text" data-error="Incompleto, corrige tus datos" data-success="Correcto"></span>
+          </div>
+          <div class="center input-field col s12 m12 l6">
+            <input class="datepicker" id="fecha" name= "fecha" type="text">
+            <label for="fecha">Fecha de nacimiento</label><span class="helper-text" data-error="Elige una fecha válida" data-success="Correcto">Ingresa tu fecha de nacimiento</span>
+          </div>
+          <div class="center input-field col s12 m12 l6">
+            <input class="validate" id="icon_email" type="email" name= "email">
+            <label for="icon_email">Email</label><span class="helper-text" data-error="Incompleto, corrige tus datos" data-success="Correcto">Ingresa tu correo</span>
+          </div>
+          <div class="center input-field col s12 m12 l12"><i class="material-icons prefix amber-text">vpn_key</i>
+            <input id="pass" type="password" name="password" />
+            <label for="pass">Contraseña</label>
+          </div>
+          <div class="center input-field col s12 m12 l6">
+            <select name="genero">
+              <option value="-1" disabled selected>Selecciona tu género</option>
+              <option value="0">Femenino</option>
+              <option value="1">Masculino</option>
+            </select>
+            <label for="icon_gen">Género</label>
+          </div>
+          <div class="center file-field input-field col s12 m12 l6">
+            <div class="left btn blue accent-4"><span>Subir</span>
+              <input type="file" name= "image" accept="image/jpeg">
+            </div>
+            <div class="file-path-wrapper">
+              <input class="file-path validate" type="text" placeholder="Carga tu foto"><span class="helper-text">Elige una imagen de perfil</span>
+            </div>
           </div>
         </div>
-      </div>
-     <div class="center"><button id="registrar" class="white-text btn green accent-4">Registrarse<i class="right material-icons">plus_one</i></button></div>
-    </ul>
-  </form>
+      <div class="center"><button id="registrar" class="white-text btn green accent-4">Registrarse<i class="right material-icons">plus_one</i></button></div>
+      </ul>
+    </form>
   </body>
   <footer class="page-footer fixed-container grey darken-4 s12 m12 l12">
     <div class="container">

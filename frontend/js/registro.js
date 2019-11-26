@@ -1,21 +1,10 @@
 let subir = fechaPicker => {
-  let nombre = document.getElementById('nombres').value;
-  let ap_materno = document.getElementById('apellido_materno').value;
-  let ap_paterno = document.getElementById('apellido_paterno').value;
-  let fecha = fechaPicker.toString();
-  let email = document.getElementById('icon_email').value;
 
-  let data = {
-    nombre,
-    ap_materno,
-    ap_paterno,
-    fecha,
-    email
-  }
+  var formData = new FormData(document.getElementById('registro'));
 
-  var formData = new FormData();
-  for (var key in data)
-    formData.append(key, data[key]);
+  // for(var pair of formData){
+  //   console.log(pair[0], pair[1]);
+  // }
 
   fetch('./../../backend/registro.php', {
     method: 'POST',
@@ -38,10 +27,12 @@ let initResgistro = () => {
     maxDate: new Date(2018, 11, 14),
     defaultDate: new Date(2018, 11, 1),
     yearRange: 10,
+    format: 	'yyyy-mm-dd'
   });
   var sidenavs = M.Sidenav.init(document.querySelectorAll('.sidenav'));
+  var selects = M.FormSelect.init(document.querySelectorAll('select'));
 
-  document.getElementById('registrar').addEventListener('click', e => subir(dates[0]));
+  document.getElementById('registrar').addEventListener('click', e => subir(dates[0], e.preventDefault()));
 }
 
 if (document.readyState == 'loading')
