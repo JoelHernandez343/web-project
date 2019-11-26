@@ -35,10 +35,17 @@
     <ul class="row center" id="bodying">
       <div class="left col s12 m8 l6"><img src="./../images/anouncement.jpg" style="width:100%;" id="anouncement"></div>
       <div class="right col s12 m4 l6 blue-text accent-4">
-        <div class="center input-field s12"><i class="material-icons prefix">account_circle</i>
-          <!--TENEMOS QUE AGREGAR LOS CAMPOS PARA EL APELLIDO MATERNO Y PATERNO POR SEPARADO-->
-          <input class="validate" id="icon_prefix" type="text">
-          <label for="icon_prefix">Nombre</label><span class="helper-text" data-error="Incompleto, corrige tus datos" data-success="Correcto">Ingresa tu nombre</span>
+        <div class="center input-field s12">
+          <input class="validate" id="nombres" type="text">
+          <label for="nombres">Nombre</label><span class="helper-text" data-error="Incompleto, corrige tus datos" data-success="Correcto"></span>
+        </div>
+        <div class="center input-field s12">
+          <input class="validate" id="apellido_materno" type="text">
+          <label for="apellido_materno">Apellido Materno</label><span class="helper-text" data-error="Incompleto, corrige tus datos" data-success="Correcto"></span>
+        </div>
+        <div class="center input-field s12">
+          <input class="validate" id="apellido_paterno" type="text">
+          <label for="apellido_paterno">Apellido Paterno</label><span class="helper-text" data-error="Incompleto, corrige tus datos" data-success="Correcto"></span>
         </div>
         <div class="center input-field col s12 m12 l6"><i class="material-icons prefix">perm_contact_calendar</i>
           <input class="datepicker" id="fecha" name= "fecha" type="text">
@@ -67,7 +74,7 @@
           </div>
         </div>
       </div>
-     <div class="center btn green accent-4"><a class="white-text" href="./account.html">Registrarse<i class="right material-icons">plus_one</i></a></div>
+     <div class="center"><button id="registrar" class="white-text btn green accent-4">Registrarse<i class="right material-icons">plus_one</i></button></div>
     </ul>
   </form>
   </body>
@@ -92,6 +99,7 @@
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="./../js/materialize.min.js"></script>
-    <script type="text/javascript" src="./../js/main.js"></script>
+    <!-- <script type="text/javascript" src="./../js/main.js"></script> -->
+    <script type="text/javascript" src="./../js/registro.js"></script>
   </footer>
 </html>
