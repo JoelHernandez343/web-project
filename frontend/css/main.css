@@ -1,106 +1,111 @@
-        body {
-            /*background-image: url("./../images/font3.jpg");
-            opacity: 1000;*/
-        }
-        
-        #bodying {
-            margin-left: 1cm;
-            margin-right: 1cm;
-        }
-        
-        #bodying_user {
-            margin-left: 1cm;
-            margin-right: 1cm;
-        }
-        
-        #title1 {
-            margin-left: 1cm;
-            margin-right: 1cm;
-        }
-        
-        #profile {
-            border-radius: 500px;
-            max-height: 400px;
-            max-width: 400px;
-            margin-top: 1cm;
-            margin-bottom: 1cm;
-            margin-left: 1cm;
-            margin-right: 1cm;
-            vertical-align: center;
-        }
-        
-        #name_profile {
-            margin-top: 1cm;
-            margin-bottom: 1cm;
-            margin-left: 1cm;
-            margin-right: 1cm;
-            vertical-align: 200px;
-        }
-        
-        #anouncement {
-            width: 100%;
-            height: auto;
-        }
-        
-        .parallax-container {
-            height: 300px;
-        }
-        /* label color */
-        
-        .input-field label {
-            color: #757575;
-        }
-        /* label focus color */
-        
-        .input-field input[type=text]:focus+label {
-            color: #757575;
-        }
-        /* label underline focus color */
-        
-        .input-field input[type=text]:focus {
-            border-bottom: 1px solid #757575;
-            box-shadow: 0 1px 0 0 #757575;
-        }
-        /* valid color */
-        
-        .input-field input[type=text].valid {}
-        /* invalid color */
-        
-        .input-field input[type=text].invalid {
-            border-bottom: 1px solid #d50000;
-            box-shadow: 0 1px 0 0 #ff8a80;
-        }
-        /* icon prefix focus color */
-        
-        .input-field .prefix.active {
-            color: #000000;
-        }
-        
-        #titleSign {
-            color: #13c740
-        }
-        
-        #titleLog {
-            color: #c71313
-        }
-        
-        #titleSignPostal {
-            color: #f06e17
-        }
-        
-        .datepicker-date-display {
-            background-color: #534e4e
-        }
-        
-        .datepicker-table-wrapper {
-            color: rgb(62, 65, 65)
-        }
-        
-        #titlerow {
-            font-weight: bolder;
-        }
-        
-        #datauser {
-            font-size: .5cm;
-            font-weight: normal;
-        }
+/* body {
+    background-image: url("./../images/font3.jpg");
+    opacity: 1000;
+} */
+
+.names h2{
+    padding: 100px 0 0 10px;
+    font-size: 2em;
+    margin: 0;
+}
+
+.names h3{
+    padding: 10px 0 0 10px;
+    margin: 0;
+}
+
+#bodying {
+    margin-left: 1cm;
+    margin-right: 1cm;
+}
+
+@media only screen and (min-width: 601px){
+    #bodying_user {
+        margin-left: 1cm;
+        margin-right: 1cm;
+    }
+}
+
+#title1 {
+    margin-left: 1cm;
+    margin-right: 1cm;
+}
+
+#profile {
+    border-radius: 500px;
+    max-height: 400px;
+    max-width: 400px;
+    margin-top: 1cm;
+    margin-bottom: 1cm;
+    margin-left: 1cm;
+    margin-right: 1cm;
+    vertical-align: center;
+}
+
+#anouncement {
+    width: 100%;
+    height: auto;
+}
+
+.parallax-container {
+    height: 300px;
+}
+/* label color */
+
+.input-field label {
+    color: #757575;
+}
+/* label focus color */
+
+.input-field input[type=text]:focus+label {
+    color: #757575;
+}
+/* label underline focus color */
+
+.input-field input[type=text]:focus {
+    border-bottom: 1px solid #757575;
+    box-shadow: 0 1px 0 0 #757575;
+}
+/* valid color */
+/* 
+.input-field input[type=text].valid {} */
+/* invalid color */
+
+.input-field input[type=text].invalid {
+    border-bottom: 1px solid #d50000;
+    box-shadow: 0 1px 0 0 #ff8a80;
+}
+/* icon prefix focus color */
+
+.input-field .prefix.active {
+    color: #000000;
+}
+
+#titleSign {
+    color: #13c740
+}
+
+#titleLog {
+    color: #c71313
+}
+
+#titleSignPostal {
+    color: #f06e17
+}
+
+.datepicker-date-display {
+    background-color: #534e4e
+}
+
+.datepicker-table-wrapper {
+    color: rgb(62, 65, 65)
+}
+
+#titlerow {
+    font-weight: bolder;
+}
+
+#datauser {
+    font-size: .5cm;
+    font-weight: normal;
+}

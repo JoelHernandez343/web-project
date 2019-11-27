@@ -38,45 +38,80 @@
     
     <div class="container">
 
-      <div class="row center" id="bodying_user">
-        <div>
-          <div class="row">
-            <div class="col 20 s12 m6 l4 center"><img style="max-height: 200px;" src="<?php echo $foto;  ?>" class="responsive-img" alt="" id="profile"/></div>
-            <div class="col s12 m6 l8">
-              <h3 class="left-align" id="name_profile">Bienvenido</h3> 
-              <h2 class="left-align" id="name_profile"><?php echo "$infPersona[4] $infPersona[5] $infPersona[6]"; ?> </h2>
-            </div>
-            
-            <div class="center col 20 s12">
-              <h4 class="left" id="titlerow">Mis datos</h4>
-              <div class="col center input-field s12"><i class="material-icons prefix">account_circle</i>
-                <input class="validate" disabled="disabled" id="icon_prefix" type="text"/>
-                <label for="icon_prefix"><?php echo "$infPersona[4] $infPersona[5] $infPersona[6]"; ?></label><span class="helper-text">Nombre</span><i class="right tiny material-icons"><a class="grey-text" href="./index.html">&nbspmode_edit </a></i>
+      <div class="row" id="bodying_user">
+        <div class="row">
+          <div class="col 20 s12 l4 center"><img style="max-height: 200px;" src="<?php echo $foto;  ?>" class="responsive-img" alt="" id="profile"/></div>
+          <div class="col s12 l8 names">
+            <h2 class="left-align">Bienvenido</h3> 
+            <h3 class="left-align"><?php echo "$infPersona[4] $infPersona[5] $infPersona[6]"; ?> </h2>
+          </div>
+          
+          <div class="col 20 s12">
+            <form id="datos" class="row">
+              <div class="col s12">
+                <h4 class="left" id="titlerow">Mis datos</h4>
               </div>
-              <div class="col center input-field col s12 m12 l6"><i class="material-icons prefix">perm_contact_calendar</i>
-                <input class="validate" disabled="disabled" id="fecha" type="text"/>
-                <label for="fecha"><?php echo $infPersona[2]; ?></label><span class="helper-text">Fecha de nacimiento</span><i class="right tiny material-icons"><a class="grey-text" href="./index.html">&nbspmode_edit </a></i>
-              </div>
-              <div class="col center input-field col s12 m12 l6"><i class="material-icons prefix">email</i>
-                <input class="validate" id="icon_email" type="email"/>
-                <label for="icon_email"><?php echo $infPersona[1]; ?></label><span class="helper-text" data-error="Incompleto, corrige tus datos" data-success="Correcto">Email</span><i class="right tiny material-icons"><a class="grey-text" href="./index.html">&nbspmode_edit</a></i>
+              <div class="col s12 center">
+                <div class="row">
+                  <div class="col input-field s4">
+                    <i class="material-icons prefix">account_circle</i>
+                    <input name="nombre" class="validate" disabled id="nombre" type="text" value="<?php echo "$infPersona[4]"; ?>"/>
+                    <label for="nombre">Nombre</label>
+                  </div>
+                  <div class="col input-field s4">
+                    <input name="apPaterno" class="validate" disabled id="apPaterno" type="text" value="<?php echo "$infPersona[5]"; ?>"/>
+                    <label for="apPaterno">Apellido Paterno</label>
+                  </div>
+                  <div class="col input-field s4">
+                    <input name="apMaterno" class="validate" disabled id="apMaterno" type="text" value="<?php echo "$infPersona[6]"; ?>"/>
+                    <label for="apMaterno">Apellido Materno</label>
+                  </div>
+                </div>
               </div>
               <div class="col center input-field col s12 m12 l6">
-                <select disabled="disabled">
-                  <option value="" disabled="disabled" selected="selected"><?php echo $genero; ?></option>
+                <i class="material-icons prefix">perm_contact_calendar</i>
+                <input name="fecha" class="datepicker" disabled id="fecha" type="text" value="<?php echo $infPersona[2]; ?>"/>
+                <label for="fecha">Fecha de nacimiento</label>
+              </div>
+              <div class="col center input-field col s12 m12 l6">
+                <i class="material-icons prefix">email</i>
+                <input name="email" disabled class="validate" id="email" type="email" value="<?php echo $infPersona[1]; ?>"/>
+                <label for="email">Correo</label>
+              </div>
+              <div class="input-field col s12 m12 l6">
+                <i class="material-icons prefix center">perm_identity</i>
+                <select name="genero" id="genero" disabled>
+                  <option value="" disabled selected="selected"><?php echo $genero; ?></option>
                   <option value="F">Femenino</option>
                   <option value="M">Masculino</option>
                 </select>
-                <label for="icon_gen"><i class="tiny material-icons">perm_identity</i>
-                  <label>Género</label>
-                </label><i class="right tiny material-icons"><a class="grey-text" href="./index.html">&nbspmode_edit</a></i>
+                <label for="genero">Género</label>
               </div>
+              <div class="input-field col s12 m12 l6">
+                <i class="material-icons prefix center">perm_identity</i>
+                <select name="genero" id="genero" disabled>
+                  <option value="" disabled selected="selected"><?php echo $genero; ?></option>
+                  <option value="F">Femenino</option>
+                  <option value="M">Masculino</option>
+                </select>
+                <label for="genero">Género</label>
+              </div>
+              <div class="col s12 input-field center">
+                <i class="material-icons prefix">vpn_key</i>
+                <input id="password" type="password" name="password" disabled/>
+                <label for="password">Contraseña</label>
+              </div>
+              <div class="col s12">
+                <button id="guardarDatos" class="btn waves-effect right disabled" type="submit"><i class="material-icons left">create</i>Guardar datos</button>
+              </div>
+            </form>
+          </div>
+          <div class="row">
+            <div class="col s12">
+              <a id="editarDatos" class="btn btn-flat waves-effect right"><i class="material-icons left">create</i>Editar datos</a>
             </div>
-
           </div>
         </div>
-      
-
         <div class="row">
           <div class="left col s12 m6 l6">
             <ul class="collapsible">
@@ -121,18 +156,9 @@
             </ul>
           </div>
         </div>
-
-
-
-        
       </div>
 
-
-
-
     </div>
-
-
 
   </body>
 
@@ -158,9 +184,10 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="./../js/materialize.min.js"></script>
     <script type="text/javascript" src="./../js/main.js"></script>
+    <script type="text/javascript" src="./../js/account.js"></script>
   </footer>
 </html>
 <?php
     }else{
-        header("location: http://localhost/web_project/frontend/build/ ");
+        header("location: ./index.php");
     }
