@@ -46,7 +46,7 @@
     </ul>
     <div class="navbar-fixed" id="heading">
       <nav class="center right nav-extended grey darken-4 s8 m8 l8">
-        <div class="nav-wrapper "><a class="center brand-logo white-text" href="./index.html"><img style="max-height: 64px;" src="./../images/logo1.png" alt=""></a><a class="sidenav-trigger" href="#" data-target="mobile-demo"><i class="material-icons">menu</i></a>
+        <div class="nav-wrapper "><a class="center brand-logo white-text" href="././index.php"><img style="max-height: 64px;" src="./../images/logo1.png" alt=""></a><a class="sidenav-trigger" href="#" data-target="mobile-demo"><i class="material-icons">menu</i></a>
           <ul class="right hide-on-med-and-down" id="nav-mobile">
             <li>
               <a class="dropdown-trigger" href="#!" data-target="dropdown1">Categorias
@@ -180,13 +180,13 @@
                   <ul class="row center">
                     <li class="center col s6 m8 l8">Hola, mai friend
                       <i class="tiny material-icons">
-                        <a class="grey-text" href="index.html/hola">&nbsp;near_me</a>
+                        <a class="grey-text" href="./index.php/hola">&nbsp;near_me</a>
                       </i>
                     </li>
                     <li class="center col s6 m4 l4">18/03/19</li>
                   </ul>
                   <ul class="row center">
-                    <li class="center col s6 m8 l8">Querida Trixie<i class="tiny material-icons"><a class="grey-text" href="index.html/hola">&nbsp;near_me</a></i></li>
+                    <li class="center col s6 m8 l8">Querida Trixie<i class="tiny material-icons"><a class="grey-text" href="./index.php/hola">&nbsp;near_me</a></i></li>
                     <li class="center col s6 m4 l4">01/12/18</li>
                   </ul>
                 </div>
@@ -203,11 +203,11 @@
                     <li class="center col s6 m4 l4">Fecha</li>
                   </ul>
                   <ul class="row center">
-                    <li class="center col s6 m8 l8">Hola, soy yo de nuevo<i class="tiny material-icons"><a class="grey-text" href="index.html/hola">&nbsp;near_me</a></i></li>
+                    <li class="center col s6 m8 l8">Hola, soy yo de nuevo<i class="tiny material-icons"><a class="grey-text" href="./index.php/hola">&nbsp;near_me</a></i></li>
                     <li class="center col s6 m4 l4">18/03/19</li>
                   </ul>
                   <ul class="row center">
-                    <li class="center col s6 m8 l8">Que ondii<i class="tiny material-icons"><a class="grey-text" href="index.html/hola">&nbsp;near_me</a></i></li>
+                    <li class="center col s6 m8 l8">Que ondii<i class="tiny material-icons"><a class="grey-text" href="./index.php/hola">&nbsp;near_me</a></i></li>
                     <li class="center col s6 m4 l4">01/12/18</li>
                   </ul>
                 </div>
