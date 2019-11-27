@@ -16,7 +16,7 @@ let subir = fechaPicker => {
     return response.text();
   })
   .then (m => console.log(m))
-  .catch(e => alert('Oucrrió un error', e));
+  .catch(e => alert('Ocurrió un error', e));
 }
 
 
@@ -27,7 +27,7 @@ let initResgistro = () => {
     maxDate: new Date(2018, 11, 14),
     defaultDate: new Date(2018, 11, 1),
     yearRange: 10,
-    format: 	'yyyy-mm-dd'
+    format: 'yyyy-mm-dd'
   });
   var sidenavs = M.Sidenav.init(document.querySelectorAll('.sidenav'));
   var selects = M.FormSelect.init(document.querySelectorAll('select'));

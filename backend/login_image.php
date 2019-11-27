@@ -10,17 +10,15 @@
     
     $infPersona = mysqli_fetch_row($resInfPersona);
     $idPersona = $infPersona[0];
-    if(file_exists("./../fotos/$boleta.jpg")){
-    $foto ="./../../fotosPerfiles/$idPersona.jpg";
-    }else
+    if(file_exists("./../../fotosPerfiles/$idPersona.jpg")){
+        $foto ="./../../fotosPerfiles/$idPersona.jpg";
+    } else {
         echo "NO EXISTE FOTO";
-
-    
+    }
     $genero=$infPersona[8];
-    if($genero == 0)
-    {
+    if($genero == 0){
         $genero = "Masculino";
-    }else {
+    } else {
         $genero = "Femenino";
     }
 

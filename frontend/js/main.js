@@ -21,6 +21,7 @@ $(function() {
         maxDate: new Date(2018, 11, 14),
         defaultDate: new Date(2018, 11, 1),
         yearRange: 10,
+        format: 'yyyy-mm-dd'
     });
 });
 
