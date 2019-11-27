@@ -13,8 +13,25 @@
         }*/
         if(mysqli_num_rows($result)==1){
           $_SESSION["usuario"]=$_POST['email'];
-          header("Location: ./../frontend/build/account.php");
+
+          $resp['status'] = 1;
+          $resp['message'] = 'Usuario correcto';
+          $resp['site'] = './../../frontend/build/account.php';
+
+          // header("Location: ./../frontend/build/account.php");
+
+          
+        } else {
+          $resp['status'] = 0;
+          $resp['message'] = 'Usuario o contraseña incorrecto';
         }
     }
-    echo "No estas en esta wea mijito";
+    else {
+      $resp = array();
+      $resp['status'] = -1;
+      $resp['message'] = 'Email vacío';
+    }
+    
+
+    echo json_encode($resp);
 ?>

@@ -132,7 +132,7 @@ let cambiarDatos = () => {
     data += '</div></div></div>';
 
     msg.innerHTML = data;
-    D.getElementById('fetch-message').scrollIntoView();
+    // D.getElementById('fetch-message').scrollIntoView();
     toggleEditar();
   })
   .then(() => setTimeout(() => {
@@ -142,9 +142,29 @@ let cambiarDatos = () => {
   .catch(e => alert('Tuvimos un error: ' + e));
 }
 
+let closeSession = () => {
+  let formData = new FormData();
+  formData.append('email', D.getElementById('email').value);
+
+  fetch('./../../backend/logout.php', {
+    method: 'POST',
+    body: formData
+  })
+  .then(response => {
+    if (!response.ok) throw response.status;
+
+    return response.json();
+  })
+  .then(response => {
+    location.href = response.site;
+  })
+  .catch(e => alert(e));
+}
+
 let init = () => {
   D.getElementById('editarDatos').addEventListener('click', toggleEditar);
   D.getElementById('guardarDatos').addEventListener('click', e => cambiarDatos(e.preventDefault()));
+  D.getElementById('close').addEventListener('click', e => closeSession(e.preventDefault()));
 }
 
 if (D.readyState = 'loading')

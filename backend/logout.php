@@ -1,7 +1,11 @@
 <?php
 	session_start();
 	//session_destroy();
-	$temp = $_REQUEST["usuario"];
-	unset($_SESSION[$temp]);
-	header("location: http://localhost/web_project/frontend/build/index.html");
+	$temp = $_POST["email"];
+	unset($_SESSION['usuario']);
+
+	$ansajax = array();
+	$ansajax['site'] = './index.php';
+
+	echo json_encode($ansajax);
 ?>

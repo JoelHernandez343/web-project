@@ -1,27 +1,26 @@
 let D = document;
 let login = () => {
-  let email = D.getElementById('icon_email').value;
-  let pass = D.getElementById('contra').value;
+  let formData = new FormData(D.getElementById('loginForm'));
 
-  let data = {
-    email, pass
-  };
-
-  fetch('./../../backend/getPost.php', {
+  fetch('./../../backend/login.php', {
     method: 'POST',
-    body: JSON.stringify(data)
+    body: formData
   })
-    .then(m => {
-      if (!m.ok) throw 'Error en el AJAX';
-      return m.text();
-    })
-    .then(m => console.log(m))
-    .catch(e => console.log(e));
+  .then(response => {
+    if (!response.ok) throw response.status;
+    return response.json();
+  })
+  .then(m => {
+    if(m.status == 1){
+      location.href = m.site;
+    }
+  })
+  .catch(e => console.log(e));
 }
 
 
 let f = () => {
-  D.getElementById('login-btn').addEventListener('click', login);
+  D.getElementById('login').addEventListener('click', e => login(e.preventDefault()));
 }
 
 if (D.readyState === 'loading')

@@ -13,7 +13,6 @@
     </ul>
     <ul class="sidenav" id="mobile-demo">
       <li><a href="./categorias.html">Categorías<i class="right material-icons">keyboard_arrow_down</i></a></li>
-      <li><a href="./send.html">Enviar<i class="right material-icons">send</i></a></li>
       <li><a href="./login.html">Account <i class="right material-icons">account_circle</i></a></li>
     </ul>
     <div class="navbar-fixed" id="heading">
@@ -21,33 +20,32 @@
         <div class="nav-wrapper "><a class="center brand-logo white-text" href="./index.php"><img style="max-height: 64px;" src="./../images/logo1.png" alt=""></a><a class="sidenav-trigger" href="#" data-target="mobile-demo"><i class="material-icons">menu</i></a>
           <ul class="right hide-on-med-and-down" id="nav-mobile">
             <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Categorias<i class="small right material-icons">keyboard_arrow_down</i></a></li>
-            <li><a href="./send.html">Enviar<i class="right material-icons">send</i></a></li>
             <li><a href="./login.html">Account<i class="right material-icons">account_circle</i></a></li>
           </ul>
         </div>
       </nav>
     </div>
-    <form action="./../../backend/login.php" method="POST">
-    <div>
-      <ul class="row center s12 m12 l12">
-        <h2 id="titleLog">Ingresar</h2>
-        <p>Entra a tu cuenta.</p>
-        <div class="left col s12 m3 l4 blue-text accent-4"></div>
-        <div class="center col s12 m6 l4 blue-text accent-4">
-          <div class="center input-field col s12 m12 l12"><i class="material-icons prefix grey-text">email</i>
-            <input class="validate" id="icon_email" type="email" name="email"/>
-            <label for="icon_email">Email</label><span class="helper-text" data-error="Incorrecto, corrige tus datos" data-success="">Ingresa tu correo</span>
+    <form id="loginForm">
+      <div class="row">
+        <div class="col center s12 m12 l12">
+          <h2 id="titleLog">Ingresar</h2>
+          <p>Entra a tu cuenta.</p>
+          <div class="left col s12 m3 l4 blue-text accent-4"></div>
+          <div class="center col s12 m6 l4 blue-text accent-4">
+            <div class="center input-field col s12 m12 l12"><i class="material-icons prefix grey-text">email</i>
+              <input class="validate" id="icon_email" type="email" name="email"/>
+              <label for="icon_email">Email</label>
+            </div>
+            <div class="center input-field col s12 m12 l12"><i class="material-icons prefix amber-text">vpn_key</i>
+              <input class="validate" id="contra" type="password" name="password" />
+              <label for="contra">Contraseña</label>
+            </div>
+            <button id="login" type="submit" class="center btn red accent-4 waves-effect">Entrar<i class="right material-icons">account_balance_wallet</i></button>
           </div>
-          <div class="center input-field col s12 m12 l12"><i class="material-icons prefix amber-text">vpn_key</i>
-            <input class="validate" id="contra" type="password" name="password" />
-            <label for="contra">Contraseña</label><span class="helper-text" data-error="Incorrecto, corrige tus datos" data-success="">Ingresa tu contraseña</span>
-          </div>
-          <button type="submit" class="center btn red accent-4 waves-effect">Entrar<i class="right material-icons">account_balance_wallet</i></button>
+          <div class="right col s12 m3 l4 blue-text accent-4"></div>
         </div>
-        <div class="right col s12 m3 l4 blue-text accent-4"></div>
-      </ul>
-    </div>
-  </form>
+      </div>
+    </form>
   <div class="row">
     <div class="col s12 center">
       <a href="./sign_up.html" class="btn waves-effect">Registrarse</a>
@@ -77,5 +75,6 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="./../js/materialize.min.js"></script>
     <script type="text/javascript" src="./../js/main.js"></script>
+    <script type="text/javascript" src="./../js/login.js"></script>
   </footer>
 </html>

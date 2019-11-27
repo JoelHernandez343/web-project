@@ -75,6 +75,7 @@
           <div class="col s12 l8 names">
             <h2 class="left-align">Bienvenido</h2> 
             <h3 class="left-align"><?php echo "$infPersona[4] $infPersona[5] $infPersona[6]"; ?> </h3>
+            <button href="#" class="btn waves-effect btn-small" style="margin: 10px 0px 0px 10px" id="close">CERRAR SESIÓN</button>
           </div>
           
           <div class="col 20 s12">
