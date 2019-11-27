@@ -46,7 +46,9 @@
       <p>Envía una postal a quien tu quieras (con e-mail).</p>
     </ul>
     <ul class="row center" id="bodying">
-      <div class="right col s12 m6 l6"><img src="./../images/trixie.jpg" style="width:100%;" id="anouncement"></div>
+      <div class="right col s12 m6 l6"><img src="
+      <?php echo $ruta;?>
+      " style="width:100%;" id="anouncement"></div>
       <div class="left col s12 m6 l6 blue-text accent-4">
         <div class="center input-field s12"><i class="amber-text material-icons prefix">email</i>
           <input class="validate" disabled id="my_email" type="email">
