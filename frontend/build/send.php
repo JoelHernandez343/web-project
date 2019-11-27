@@ -27,10 +27,7 @@
     </ul>
     <ul class="sidenav" id="mobile-demo">
       <li><a href="./categorias.html">Categorías<i class="right material-icons">keyboard_arrow_down</i></a></li>
-<<<<<<< HEAD:frontend/build/send.html
-=======
       <li><a href="./send.php">Enviar<i class="right material-icons">send</i></a></li>
->>>>>>> murio:frontend/build/send.php
       <li><a href="./login.html">Account <i class="right material-icons">account_circle</i></a></li>
     </ul>
     <div class="navbar-fixed" id="heading">
@@ -38,10 +35,7 @@
         <div class="nav-wrapper "><a class="center brand-logo white-text" href="./index.php"><img style="max-height: 64px;" src="./../images/logo1.png" alt=""></a><a class="sidenav-trigger" href="#" data-target="mobile-demo"><i class="material-icons">menu</i></a>
           <ul class="right hide-on-med-and-down" id="nav-mobile">
             <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Categorias<i class="small right material-icons">keyboard_arrow_down</i></a></li>
-<<<<<<< HEAD:frontend/build/send.html
-=======
             <li><a href="./send.php">Enviar<i class="right material-icons">send</i></a></li>
->>>>>>> murio:frontend/build/send.php
             <li><a href="./login.html">Account<i class="right material-icons">account_circle</i></a></li>
           </ul>
         </div>
