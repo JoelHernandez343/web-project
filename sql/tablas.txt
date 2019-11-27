@@ -19,7 +19,7 @@ destinatario varchar(40),
 fechaTiempo DateTime,
 idPersona int, 
 foreign key(idPersona) references persona(idPersona)
-on delete cascade on update cascade
+on delete cascade on update cascade,
 foreign key(idPostal) references postal(idPostal)
 on delete cascade on update cascade
 );

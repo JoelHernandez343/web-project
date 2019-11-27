@@ -7,10 +7,10 @@
         $sql="SELECT idPersona FROM persona WHERE correo='".$correo."' AND contrasena='".$pass."'";
         //echo "SELECT * FROM administrador WHERE correo='".$correo."' AND contrasena='".$pass."'" ;
         $result=mysqli_query($conexion, $sql);
-        while($row = mysqli_fetch_array($result))
+        /*while($row = mysqli_fetch_array($result))
         {
           $id=$row["idPersona"];
-        }
+        }*/
         if(mysqli_num_rows($result)==1){
           $_SESSION["usuario"]=$_POST['email'];
           header("Location: ./../frontend/build/account.php");
