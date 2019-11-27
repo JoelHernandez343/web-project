@@ -168,7 +168,7 @@
             </div>
           </div>
         </div>
-        <div class="row">
+        <!-- <div class="row">
           <div class="left col s12 m6 l6">
             <ul class="collapsible">
               <li>
@@ -215,7 +215,7 @@
               </li>
             </ul>
           </div>
-        </div>
+        </div> -->
       </div>
 
     </div>
