@@ -2,7 +2,6 @@
   include("./../../backend/confiBD.php");
   include("./../../backend/postales.php");
 ?>
-
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -18,7 +17,7 @@
     </ul>
     <ul class="sidenav" id="mobile-demo">
       <li><a href="./categorias.html">Categorías<i class="right material-icons">keyboard_arrow_down</i></a></li>
-      <li><a href="./send.html">Enviar<i class="right material-icons">send</i></a></li>
+      <li><a href="./send.php">Enviar<i class="right material-icons">send</i></a></li>
       <li><a href="./login.html">Account <i class="right material-icons">account_circle</i></a></li>
     </ul>
     <div class="navbar-fixed" id="heading">
@@ -26,7 +25,7 @@
         <div class="nav-wrapper "><a class="center brand-logo white-text" href="#"><img style="max-height: 64px;" src="./../images/logo1.png" alt=""></a><a class="sidenav-trigger" href="#" data-target="mobile-demo"><i class="material-icons">menu</i></a>
           <ul class="right hide-on-med-and-down" id="nav-mobile">
             <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Categorias<i class="small right material-icons">keyboard_arrow_down</i></a></li>
-            <li><a href="./send.html">Enviar<i class="right material-icons">send</i></a></li>
+            <li><a href="./send.php">Enviar<i class="right material-icons">send</i></a></li>
             <li><a href="./login.html">Account<i class="right material-icons">account_circle</i></a></li>
           </ul>
         </div>
@@ -74,94 +73,45 @@
         <h4 class="brand-logo" href="#!">Más populares<i class="small material-icons">&nbspgrade</i></h4>
       </li>
       <div class="row">
-        <div class="col s12 m4 l3">
+
+        <?php
+        $i=0;
+          while ($infPersona = mysqli_fetch_row($resultadoPopulares)){
+            if($i == 4) break;
+            $src = "http://localhost/web_project/"."$infPersona[7]\\$infPersona[1].JPG";
+             echo "$infPersona[0]";
+        ?>
+            
+            <div class="col s12 m4 l3">
           <div class="card" href="#">
-            <div class="card-image"><img src="./../images/example.jpg"/><a class="card-title">undefined</a></div>
+            <div class="card-image"><img src="<?php echo $src ?>"/><a class="card-title">undefined</a></div>
             <div class="card-content">
               <p>undefined</p>
             </div>
-            <div class="card-action"> <a class="right btn waves-effect white red-text red lighten-4-text-2" href="undefined"><i class="tiny material-icons" href="#actionfav">favorite</i></a><a class="right btn modal-trigger waves-effect white grey-text red lighten-4-text-2" href="#modal1"><i class="tiny material-icons" href="#">remove_red_eye</i></a></div>
+            <div class="card-action"> <a class="right btn waves-effect white red-text red lighten-4-text-2" href="undefined"><i class="tiny material-icons" href="#actionfav">favorite</i></a><a class="right btn modal-trigger waves-effect white grey-text red lighten-4-text-2" href="#modal<?php echo $i?>"><i class="tiny material-icons" href="#">remove_red_eye</i></a></div>
           </div>
         </div>
-        <div class="modal modal-fixed-footer" id="modal1">
+        <div class="modal modal-fixed-footer" id="modal<?php echo $i?>">
           <div class="modal-content">
             <div class="col s12 m12 l12">
               <div class="card" href="#">
-                <div class="card-image"><img src="./../images/example.jpg"/><a class="card-title">undefined</a></div>
+                <div class="card-image"><img src="<?php echo $src?>"/><a class="card-title">undefined</a></div>
                 <div class="card-content">
                   <p>undefined</p>
                 </div>
               </div>
             </div>
           </div>
-          <div class="modal-footer"><a class="modal-close waves-effect waves-green btn-flat" href="./send.html">Send</a></div>
-        </div>
-        <div class="col s12 m4 l3">
-          <div class="card" href="#">
-            <div class="card-image"><img src="./../images/example.jpg"/><a class="card-title">undefined</a></div>
-            <div class="card-content">
-              <p>undefined</p>
-            </div>
-            <div class="card-action"> <a class="right btn waves-effect white red-text red lighten-4-text-2" href="undefined"><i class="tiny material-icons" href="#actionfav">favorite</i></a><a class="right btn modal-trigger waves-effect white grey-text red lighten-4-text-2" href="#modal1"><i class="tiny material-icons" href="#">remove_red_eye</i></a></div>
+          <div class="modal-footer">
+          <?php
+            echo "<a class='modal-close waves-effect waves-green btn-flat' href='./send.php?id={$infPersona[0]}'>Send</a>";
+            ?>
           </div>
         </div>
-        <div class="modal modal-fixed-footer" id="modal1">
-          <div class="modal-content">
-            <div class="col s12 m12 l12">
-              <div class="card" href="#">
-                <div class="card-image"><img src="./../images/example.jpg"/><a class="card-title">undefined</a></div>
-                <div class="card-content">
-                  <p>undefined</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="modal-footer"><a class="modal-close waves-effect waves-green btn-flat" href="./send.html">Send</a></div>
-        </div>
-        <div class="col s12 m4 l3">
-          <div class="card" href="#">
-            <div class="card-image"><img src="./../images/example.jpg"/><a class="card-title">undefined</a></div>
-            <div class="card-content">
-              <p>undefined</p>
-            </div>
-            <div class="card-action"> <a class="right btn waves-effect white red-text red lighten-4-text-2" href="undefined"><i class="tiny material-icons" href="#actionfav">favorite</i></a><a class="right btn modal-trigger waves-effect white grey-text red lighten-4-text-2" href="#modal1"><i class="tiny material-icons" href="#">remove_red_eye</i></a></div>
-          </div>
-        </div>
-        <div class="modal modal-fixed-footer" id="modal1">
-          <div class="modal-content">
-            <div class="col s12 m12 l12">
-              <div class="card" href="#">
-                <div class="card-image"><img src="./../images/example.jpg"/><a class="card-title">undefined</a></div>
-                <div class="card-content">
-                  <p>undefined</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="modal-footer"><a class="modal-close waves-effect waves-green btn-flat" href="./send.html">Send</a></div>
-        </div>
-        <div class="col s12 m4 l3">
-          <div class="card" href="#">
-            <div class="card-image"><img src="./../images/example.jpg"/><a class="card-title">undefined</a></div>
-            <div class="card-content">
-              <p>undefined</p>
-            </div>
-            <div class="card-action"> <a class="right btn waves-effect white red-text red lighten-4-text-2" href="undefined"><i class="tiny material-icons" href="#actionfav">favorite</i></a><a class="right btn modal-trigger waves-effect white grey-text red lighten-4-text-2" href="#modal1"><i class="tiny material-icons" href="#">remove_red_eye</i></a></div>
-          </div>
-        </div>
-        <div class="modal modal-fixed-footer" id="modal1">
-          <div class="modal-content">
-            <div class="col s12 m12 l12">
-              <div class="card" href="#">
-                <div class="card-image"><img src="./../images/example.jpg"/><a class="card-title">undefined</a></div>
-                <div class="card-content">
-                  <p>undefined</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="modal-footer"><a class="modal-close waves-effect waves-green btn-flat" href="./send.html">Send</a></div>
-        </div>
+            
+            <?php 
+          $i+=1;}
+          ?>
       </div>
       <p></p>
       <ul class="center black-text s12 m12 l12">
@@ -188,7 +138,7 @@
               </div>
             </div>
           </div>
-          <div class="modal-footer"><a class="modal-close waves-effect waves-green btn-flat" href="./send.html">Send</a></div>
+          <div class="modal-footer"><a class="modal-close waves-effect waves-green btn-flat" href="./send.php">Send</a></div>
         </div>
         <div class="col s12 m4 l3">
           <div class="card" href="#">
@@ -210,7 +160,7 @@
               </div>
             </div>
           </div>
-          <div class="modal-footer"><a class="modal-close waves-effect waves-green btn-flat" href="./send.html">Send</a></div>
+          <div class="modal-footer"><a class="modal-close waves-effect waves-green btn-flat" href="./send.php">Send</a></div>
         </div>
         <div class="col s12 m4 l3">
           <div class="card" href="#">
@@ -232,7 +182,7 @@
               </div>
             </div>
           </div>
-          <div class="modal-footer"><a class="modal-close waves-effect waves-green btn-flat" href="./send.html">Send</a></div>
+          <div class="modal-footer"><a class="modal-close waves-effect waves-green btn-flat" href="./send.php">Send</a></div>
         </div>
         <div class="col s12 m4 l3">
           <div class="card" href="#">
@@ -254,9 +204,11 @@
               </div>
             </div>
           </div>
-          <div class="modal-footer"><a class="modal-close waves-effect waves-green btn-flat" href="./send.html">Send</a></div>
+          <div class="modal-footer"><a class="modal-close waves-effect waves-green btn-flat" href="./send.php">Send</a></div>
         </div>
       </div>
+
+
     </ul>
   </body>
   <footer class="page-footer fixed-container grey darken-4 s12 m12 l12">

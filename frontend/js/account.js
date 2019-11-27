@@ -108,6 +108,8 @@ let cambiarDatos = () => {
   .then( response => {
     if (!response.ok) throw response.status;
 
+    console.log(response);
+
     return response.json();
   })
   .then(response => {

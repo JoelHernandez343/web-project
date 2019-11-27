@@ -14,6 +14,8 @@
         header("Location: loginAdmin.php");
         exit();
     }
+ 
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -37,6 +39,9 @@
 <script src="./../js/validetta/dist/validetta.min.js"></script>
 <script src="./../js/validetta/localization/validettaLang-es-ES.js"></script>
 <script src="./../js/confirm/dist/jquery-confirm.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </head>
 <body>
@@ -44,12 +49,85 @@
           <nav class="center right nav-extended grey darken-4 s8 m8 l8">
             <div class="nav-wrapper "><a class="center brand-logo white-text" href="./../frontend/views/index.html"><img style="max-height: 64px;" src="./../frontend/images/logo1.png" alt=""></a><a class="sidenav-trigger" href="#" data-target="mobile-demo"><i class="material-icons">menu</i></a>
               <ul class="right hide-on-med-and-down" id="nav-mobile">
-                <li style="font-size:30px">Perfil de Administrador</li>
+                <li style="font-size:30px">Perfil de Administrador &nbsp &nbsp</li>
               </ul>
             </div>
           </nav>
         </div>
     <main>
+    <div class="container">
+  
+        <div class="page-header">
+            <h1>Postales  existentes</h1>
+        </div>
+     
+        <?php 
+        $action = isset($_GET['action']) ? $_GET['action'] : "";
+ 
+        // if it was redirected from delete.php
+        if($action=='deleted'){
+            echo "<div class='alert alert-success'>La postal fue eliminada.</div>";
+        }
+ 
+// select all data
+$query = "SELECT nombre, cate, likes, nEnvios, idPostal, ruta FROM postal";
+$resulta=mysqli_query($conexion, $query);
+// this is how to get number of rows returned
+$num = mysqli_num_rows($resulta);
+ 
+// link to create record form
+echo "<a href='./CPostal.php' class='btn btn-primary m-b-1em'>Subir una nueva postal</a><br>";
+ 
+//check if more than 0 record found
+if($num>0){
+ 
+  echo "<table class='table table-hover table-responsive table-bordered'>";//start table
+ 
+  //creating our table heading
+  echo "<br><tr>";
+      echo "<th>Nombre</th>";
+      echo "<th>Categor&iacutea</th>";
+      echo "<th>N&uacutemero de likes</th>";
+      echo "<th>N&uacutemero env&iacuteos</th>";
+      echo "<th>Opciones</th>";
+  echo "</tr>";
+
+while ($row = mysqli_fetch_row($resulta)){
+  echo "<tr>";
+      echo "<td>{$row[0]}</td>";
+      echo "<td>{$row[1]}</td>";
+      echo "<td>{$row[2]}</td>";
+      echo "<td>{$row[3]}</td>";
+      echo "<td>";
+          echo "<a href='./RPostal.php?id={$row[4]}' class='btn btn-info m-r-1em'>Visualizar</a> &nbsp &nbsp";
+          echo "<a href='update.php?id={$row[4]}' class='btn btn-primary m-r-1em'>Modificar</a> &nbsp &nbsp";
+          echo "<a href='#' onclick='delete_user({$row[4]});'  class='btn btn-danger'>Eliminar</a>";
+      echo "</td>";
+  echo "</tr>";
+}
+
+echo "</table>";
+     
+}
+ 
+else{
+    echo "<div class='alert alert-danger'>No existen postales</div>";
+}
+        ?>
+         
+    </div>
+    <script type='text/javascript'>
+    // confirm record deletion
+    function delete_user( id ){
+        
+        var answer = confirm('¿Estas seguro que quieres eliminar permanentemente esta postal?');
+        if (answer){
+            // if user clicked ok, 
+            // pass the id to delete.php and execute the delete query
+            window.location = './DPostal.php?id=' + id;
+        } 
+    }
+    </script>
         <div class="container">
             <div class="row">
                 <div class="col s12 input-field">
@@ -63,6 +141,7 @@
             </form>
         </div>
     </main>
+    
 </body>
 <footer>
       <div class="footer-copyright">
