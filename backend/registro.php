@@ -25,11 +25,9 @@
 
         $respAX["val"] = 1;
         $respAX["msj"] = "Se registraron correctamente sus datos\n";
-        $dirFoto = "./";
+        $dirFoto = "./../fotosPerfiles/";
         $archFoto = $dirFoto.basename($_FILES["image"]["name"]);
         $extFoto = pathinfo($_FILES["image"]["name"],PATHINFO_EXTENSION);
-        echo $extFoto;
-        echo "\n";
         $destFoto = $dirFoto.$id.".".$extFoto;
 
         echo $destFoto;

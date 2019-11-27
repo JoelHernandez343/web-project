@@ -13,7 +13,7 @@
         }
         if(mysqli_num_rows($result)==1){
           $_SESSION["usuario"]=$_POST['email'];
-          header("Location: http://localhost/web_project/frontend/build/account.php");
+          header("Location: ./../frontend/build/account.php");
         }
     }
     echo "No estas en esta wea mijito";
