@@ -53,9 +53,8 @@
             echo "No se pudo";
             }
     }else {
-    echo  "<script>alert('Usuario ya existe');</script>";
-    header("Location: http://localhost/web_project/frontend/build/sign_up.html");
-}
+        echo "ya existe el usuario";
+    }
     // echo $_POST['nombre'];
     // echo "\n";
     // echo $_POST['password'];
